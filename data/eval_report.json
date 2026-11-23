@@ -1,0 +1,9363 @@
+{
+ "v2": {
+  "version": "v2",
+  "n_queries": 80,
+  "errors": 0,
+  "slot_field_acc": {
+   "people": 100.0,
+   "budget": 100.0,
+   "max_km": 100.0,
+   "need_room": 100.0,
+   "category": 98.8,
+   "avoid": 100.0
+  },
+  "slot_all_correct": 98.8,
+  "hard_constraint_pass": 99.5,
+  "hallucination_rate": 0.0,
+  "usable_rate": 75.0,
+  "avg_recs": 2.3,
+  "details": [
+   {
+    "id": "Q01",
+    "query": "我们12个人聚餐，人均别超过120，要有包间",
+    "expect": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里，有包间"
+     },
+     {
+      "name": "锦记小馆",
+      "avg_price": 115,
+      "distance_km": 2.59,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均115元，距您2.59公里，有包间"
+     },
+     {
+      "name": "八合里海记",
+      "avg_price": 92,
+      "distance_km": 0.58,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均92元，距您0.58公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记小馆",
+      "reason": "人均115元，距您2.59公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，距您0.58公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q02",
+    "query": "6个人吃火锅，人均100以内，3公里内",
+    "expect": {
+     "people": 6,
+     "budget": 100,
+     "max_km": 3,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 100,
+     "max_km": 3,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "椰子鸡·椰妹",
+      "avg_price": 88,
+      "distance_km": 0.63,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "火锅",
+      "reason": "人均88元，距您0.63公里"
+     },
+     {
+      "name": "呷哺呷哺",
+      "avg_price": 58,
+      "distance_km": 0.4,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "火锅",
+      "reason": "人均58元，距您0.4公里"
+     },
+     {
+      "name": "半山私厨",
+      "avg_price": 70,
+      "distance_km": 1.94,
+      "tags": [],
+      "category": "火锅",
+      "reason": "人均70元，距您1.94公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，距您0.63公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "呷哺呷哺",
+      "reason": "人均58元，距您0.4公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "半山私厨",
+      "reason": "人均70元，距您1.94公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q03",
+    "query": "两个人约会，想安静点的西餐，人均200左右",
+    "expect": {
+     "people": 2,
+     "budget": 200,
+     "max_km": null,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 200,
+     "max_km": null,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "蓝蛙",
+      "avg_price": 158,
+      "distance_km": 0.31,
+      "tags": [
+       "安静"
+      ],
+      "category": "西餐",
+      "reason": "人均158元，距您0.31公里，安静适合约会"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "蓝蛙",
+      "reason": "人均158元，距您0.31公里，安静适合约会",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q04",
+    "query": "公司团建20人，预算人均150，要能开发票有包间",
+    "expect": {
+     "people": 20,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 20,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "海底捞",
+      "avg_price": 135,
+      "distance_km": 0.38,
+      "tags": [
+       "有包间",
+       "适合带娃",
+       "夜宵",
+       "可开发票"
+      ],
+      "category": "火锅",
+      "reason": "人均135元，距您0.38公里，有包间可开发票"
+     },
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间可开发票"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "avg_price": 138,
+      "distance_km": 0.91,
+      "tags": [
+       "有包间",
+       "安静",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均138元，距您0.91公里，有包间可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，距您0.38公里，有包间可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，距您0.91公里，有包间可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q05",
+    "query": "附近有什么好吃的粤菜，4个人，人均80",
+    "expect": {
+     "people": 4,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "点都德",
+      "avg_price": 72,
+      "distance_km": 0.65,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "粤菜",
+      "reason": "人均72元，距您0.65公里"
+     },
+     {
+      "name": "表哥茶餐厅",
+      "avg_price": 55,
+      "distance_km": 0.27,
+      "tags": [
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均55元，距您0.27公里"
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "avg_price": 78,
+      "distance_km": 2.63,
+      "tags": [
+       "有包间",
+       "可停车",
+       "夜宵"
+      ],
+      "category": "粤菜",
+      "reason": "人均78元，距您2.63公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，距您0.65公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，距您0.27公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，距您2.63公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q06",
+    "query": "带娃吃饭，5个人，要有包间，别太辣",
+    "expect": {
+     "people": 5,
+     "budget": null,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": {
+     "people": 5,
+     "budget": null,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "recs": [
+     {
+      "name": "海底捞",
+      "avg_price": 135,
+      "distance_km": 0.38,
+      "tags": [
+       "有包间",
+       "适合带娃",
+       "夜宵",
+       "可开发票"
+      ],
+      "category": "火锅",
+      "reason": "人均135元，距您0.38公里，有包间且适合带娃"
+     },
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间且不辣"
+     },
+     {
+      "name": "鮨一",
+      "avg_price": 320,
+      "distance_km": 0.63,
+      "tags": [
+       "有包间",
+       "安静",
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均320元，距您0.63公里，有包间且不辣"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，距您0.38公里，有包间且适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间且不辣",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "鮨一",
+      "reason": "人均320元，距您0.63公里，有包间且不辣",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q07",
+    "query": "深夜想吃烧烤，两个人，别太远1公里内",
+    "expect": {
+     "people": 2,
+     "budget": null,
+     "max_km": 1,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": null,
+     "max_km": 1,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，夜宵烧烤"
+     },
+     {
+      "name": "老码头食堂",
+      "avg_price": 65,
+      "distance_km": 0.93,
+      "tags": [],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.93公里，深夜烧烤"
+     },
+     {
+      "name": "木屋烧烤",
+      "avg_price": 65,
+      "distance_km": 0.49,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.49公里，夜宵烧烤"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，夜宵烧烤",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头食堂",
+      "reason": "人均65元，距您0.93公里，深夜烧烤",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，距您0.49公里，夜宵烧烤",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q08",
+    "query": "10人聚餐，人均60，学校附近就行",
+    "expect": {
+     "people": 10,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 10,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "十三行饭店",
+      "avg_price": 55,
+      "distance_km": 4.0,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "夜宵"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均55元，距您4.0公里，符合预算且有包间"
+     },
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里，刚好满足预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "十三行饭店",
+      "reason": "人均55元，距您4.0公里，符合预算且有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里，刚好满足预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q09",
+    "query": "想吃日料，人均300以内，2人",
+    "expect": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "客味私厨",
+      "avg_price": 80,
+      "distance_km": 2.22,
+      "tags": [
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均80元，距您2.22公里"
+     },
+     {
+      "name": "同福菜馆",
+      "avg_price": 140,
+      "distance_km": 0.3,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均140元，距您0.3公里"
+     },
+     {
+      "name": "大娘家餐厅",
+      "avg_price": 120,
+      "distance_km": 4.49,
+      "tags": [
+       "有包间",
+       "夜宵"
+      ],
+      "category": "日料",
+      "reason": "人均120元，距您4.49公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "客味私厨",
+      "reason": "人均80元，距您2.22公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "同福菜馆",
+      "reason": "人均140元，距您0.3公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大娘家餐厅",
+      "reason": "人均120元，距您4.49公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q10",
+    "query": "8个人吃湘菜，人均90，要包间",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 8,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "农耕记",
+      "avg_price": 78,
+      "distance_km": 0.76,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "湘菜",
+      "reason": "人均78元，距您0.76公里，有包间"
+     },
+     {
+      "name": "家味食堂",
+      "avg_price": 65,
+      "distance_km": 3.4,
+      "tags": [
+       "有包间",
+       "适合带娃"
+      ],
+      "category": "湘菜",
+      "reason": "人均65元，距您3.4公里，有包间"
+     },
+     {
+      "name": "李记饭店",
+      "avg_price": 50,
+      "distance_km": 4.22,
+      "tags": [
+       "有包间"
+      ],
+      "category": "湘菜",
+      "reason": "人均50元，距您4.22公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "农耕记",
+      "reason": "人均78元，距您0.76公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味食堂",
+      "reason": "人均65元，距您3.4公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "李记饭店",
+      "reason": "人均50元，距您4.22公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q11",
+    "query": "4个人吃川菜，2公里内，人均70",
+    "expect": {
+     "people": 4,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "陈麻婆豆腐",
+      "avg_price": 58,
+      "distance_km": 0.19,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "川菜",
+      "reason": "人均58元，距您0.19公里，符合预算和距离"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，距您0.19公里，符合预算和距离",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q12",
+    "query": "请客户吃饭，6个人，人均300，要安静有包间",
+    "expect": {
+     "people": 6,
+     "budget": 300,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 300,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "王品牛排",
+      "avg_price": 268,
+      "distance_km": 0.45,
+      "tags": [
+       "有包间",
+       "安静",
+       "可开发票"
+      ],
+      "category": "西餐",
+      "reason": "人均268元，距您0.45公里，安静有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "王品牛排",
+      "reason": "人均268元，距您0.45公里，安静有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q13",
+    "query": "3个人随便吃点面，人均40",
+    "expect": {
+     "people": 3,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "锦记菜馆",
+      "avg_price": 40,
+      "distance_km": 4.67,
+      "tags": [],
+      "category": "面食",
+      "reason": "人均40元，距您4.67公里"
+     },
+     {
+      "name": "喜家德水饺",
+      "avg_price": 40,
+      "distance_km": 0.41,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "面食",
+      "reason": "人均40元，距您0.41公里"
+     },
+     {
+      "name": "遇见小面",
+      "avg_price": 38,
+      "distance_km": 0.19,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "面食",
+      "reason": "人均38元，距您0.19公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "锦记菜馆",
+      "reason": "人均40元，距您4.67公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，距您0.41公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，距您0.19公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q14",
+    "query": "15人同学聚会，人均100，5公里内",
+    "expect": {
+     "people": 15,
+     "budget": 100,
+     "max_km": 5,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 15,
+     "budget": 100,
+     "max_km": 5,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "客味私厨",
+      "avg_price": 80,
+      "distance_km": 2.22,
+      "tags": [
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均80元，距您2.22公里"
+     },
+     {
+      "name": "费大厨辣椒炒肉",
+      "avg_price": 68,
+      "distance_km": 0.55,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "湘菜",
+      "reason": "人均68元，距您0.55公里"
+     },
+     {
+      "name": "八合里海记",
+      "avg_price": 92,
+      "distance_km": 0.58,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均92元，距您0.58公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "客味私厨",
+      "reason": "人均80元，距您2.22公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "人均68元，距您0.55公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，距您0.58公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q15",
+    "query": "两个人吃海鲜，不要太贵，人均150",
+    "expect": {
+     "people": 2,
+     "budget": 150,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 150,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "半山食府",
+      "avg_price": 110,
+      "distance_km": 1.94,
+      "tags": [],
+      "category": "海鲜",
+      "reason": "人均110元，距您1.94公里"
+     },
+     {
+      "name": "得闲食堂",
+      "avg_price": 135,
+      "distance_km": 4.45,
+      "tags": [
+       "有包间",
+       "可开发票",
+       "可拼桌"
+      ],
+      "category": "海鲜",
+      "reason": "人均135元，距您4.45公里"
+     },
+     {
+      "name": "淳味饭店",
+      "avg_price": 140,
+      "distance_km": 1.25,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "海鲜",
+      "reason": "人均140元，距您1.25公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "半山食府",
+      "reason": "人均110元，距您1.94公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "人均135元，距您4.45公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "淳味饭店",
+      "reason": "人均140元，距您1.25公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q16",
+    "query": "想找素食餐厅，3个人，安静点",
+    "expect": {
+     "people": 3,
+     "budget": null,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": null,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "素菜馆·慈心",
+      "avg_price": 68,
+      "distance_km": 0.32,
+      "tags": [
+       "安静",
+       "有包间"
+      ],
+      "category": "素食",
+      "reason": "人均68元，距您0.32公里，安静适合聚餐"
+     },
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里，素食环境清静"
+     },
+     {
+      "name": "十三行小馆",
+      "avg_price": 105,
+      "distance_km": 4.39,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均105元，距您4.39公里，素食评分高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "人均68元，距您0.32公里，安静适合聚餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里，素食环境清静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "十三行小馆",
+      "reason": "人均105元，距您4.39公里，素食评分高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q17",
+    "query": "6个人吃烤肉，人均120，有包间最好",
+    "expect": {
+     "people": 6,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "日式烤肉",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "锦记小馆",
+      "avg_price": 115,
+      "distance_km": 2.59,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均115元，距您2.59公里，有包间"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，有包间"
+     },
+     {
+      "name": "得闲小馆",
+      "avg_price": 80,
+      "distance_km": 3.7,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均80元，距您3.7公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "锦记小馆",
+      "reason": "人均115元，距您2.59公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，距您3.7公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q18",
+    "query": "附近有东南亚菜吗，2人，人均100",
+    "expect": {
+     "people": 2,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "西贡妈妈",
+      "avg_price": 76,
+      "distance_km": 0.82,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均76元，距您0.82公里，符合预算且近"
+     },
+     {
+      "name": "码头食府",
+      "avg_price": 90,
+      "distance_km": 0.74,
+      "tags": [
+       "有包间"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均90元，距您0.74公里，符合预算且近"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贡妈妈",
+      "reason": "人均76元，距您0.82公里，符合预算且近",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "码头食府",
+      "reason": "人均90元，距您0.74公里，符合预算且近",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q19",
+    "query": "20人年会，人均200，要包间和停车",
+    "expect": {
+     "people": 20,
+     "budget": 200,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 20,
+     "budget": 200,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "海底捞",
+      "avg_price": 135,
+      "distance_km": 0.38,
+      "tags": [
+       "有包间",
+       "适合带娃",
+       "夜宵",
+       "可开发票"
+      ],
+      "category": "火锅",
+      "reason": "人均135元，距您0.38公里，有包间"
+     },
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间和停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，距您0.38公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间和停车",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q20",
+    "query": "一个人吃饭，30块以内",
+    "expect": {
+     "people": 1,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 1,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "喜茶",
+      "avg_price": 28,
+      "distance_km": 0.23,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "甜品咖啡",
+      "reason": "人均28元，距您0.23公里，符合预算且最近"
+     },
+     {
+      "name": "三味菜馆",
+      "avg_price": 25,
+      "distance_km": 3.14,
+      "tags": [
+       "适合带娃"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均25元，距您3.14公里，价格合适"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，距您0.23公里，符合预算且最近",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，距您3.14公里，价格合适",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q21",
+    "query": "4个人吃潮汕牛肉火锅，人均90",
+    "expect": {
+     "people": 4,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "三味食府",
+      "avg_price": 90,
+      "distance_km": 4.62,
+      "tags": [
+       "安静",
+       "宠物友好"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均90元，距您4.62公里，安静适合聚餐"
+     },
+     {
+      "name": "淳味酒家",
+      "avg_price": 90,
+      "distance_km": 0.85,
+      "tags": [
+       "有包间",
+       "可开发票"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均90元，距您0.85公里，有包间"
+     },
+     {
+      "name": "阿婆食府",
+      "avg_price": 90,
+      "distance_km": 5.68,
+      "tags": [
+       "有包间",
+       "夜宵",
+       "可开发票"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均90元，距您5.68公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "三味食府",
+      "reason": "人均90元，距您4.62公里，安静适合聚餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "淳味酒家",
+      "reason": "人均90元，距您0.85公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆食府",
+      "reason": "人均90元，距您5.68公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q22",
+    "query": "8个人吃江浙菜，人均80，3公里内",
+    "expect": {
+     "people": 8,
+     "budget": 80,
+     "max_km": 3,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 8,
+     "budget": 80,
+     "max_km": 3,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "胖哥俩肉蟹煲",
+      "avg_price": 76,
+      "distance_km": 0.45,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "江浙菜",
+      "reason": "人均76元，距您0.45公里"
+     },
+     {
+      "name": "绿茶餐厅",
+      "avg_price": 69,
+      "distance_km": 0.58,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "江浙菜",
+      "reason": "人均69元，距您0.58公里"
+     },
+     {
+      "name": "家味小馆",
+      "avg_price": 50,
+      "distance_km": 2.68,
+      "tags": [
+       "有包间",
+       "安静"
+      ],
+      "category": "江浙菜",
+      "reason": "人均50元，距您2.68公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "人均76元，距您0.45公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，距您0.58公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味小馆",
+      "reason": "人均50元，距您2.68公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q23",
+    "query": "想吃夜宵，5个人，人均70，要包间",
+    "expect": {
+     "people": 5,
+     "budget": 70,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 70,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "十三行饭店",
+      "avg_price": 55,
+      "distance_km": 4.0,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "夜宵"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均55元，距您4.0公里，有包间且供夜宵"
+     },
+     {
+      "name": "素菜馆·慈心",
+      "avg_price": 68,
+      "distance_km": 0.32,
+      "tags": [
+       "安静",
+       "有包间"
+      ],
+      "category": "素食",
+      "reason": "人均68元，距您0.32公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "十三行饭店",
+      "reason": "人均55元，距您4.0公里，有包间且供夜宵",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "素菜馆·慈心",
+      "reason": "人均68元，距您0.32公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q24",
+    "query": "12人聚餐，人均110，别超过4公里",
+    "expect": {
+     "people": 12,
+     "budget": 110,
+     "max_km": 4,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 12,
+     "budget": 110,
+     "max_km": 4,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里"
+     },
+     {
+      "name": "禾田餐厅",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均110元，距您1.16公里"
+     },
+     {
+      "name": "客味私厨",
+      "avg_price": 80,
+      "distance_km": 2.22,
+      "tags": [
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均80元，距您2.22公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "禾田餐厅",
+      "reason": "人均110元，距您1.16公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "客味私厨",
+      "reason": "人均80元，距您2.22公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q25",
+    "query": "2个人吃甜品咖啡，人均50",
+    "expect": {
+     "people": 2,
+     "budget": 50,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 50,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "喜茶",
+      "avg_price": 28,
+      "distance_km": 0.23,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "甜品咖啡",
+      "reason": "人均28元，距您0.23公里"
+     },
+     {
+      "name": "三味私厨",
+      "avg_price": 45,
+      "distance_km": 6.23,
+      "tags": [
+       "有包间",
+       "可开发票"
+      ],
+      "category": "甜品咖啡",
+      "reason": "人均45元，距您6.23公里"
+     },
+     {
+      "name": "家味食府",
+      "avg_price": 35,
+      "distance_km": 5.02,
+      "tags": [],
+      "category": "甜品咖啡",
+      "reason": "人均35元，距您5.02公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，距您0.23公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "三味私厨",
+      "reason": "人均45元，距您6.23公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，距您5.02公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q26",
+    "query": "6人吃西北菜，人均90，有包间",
+    "expect": {
+     "people": 6,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "西贝莜面村",
+      "avg_price": 86,
+      "distance_km": 0.42,
+      "tags": [
+       "有包间",
+       "适合带娃"
+      ],
+      "category": "西北菜",
+      "reason": "人均86元，距您0.42公里，有包间"
+     },
+     {
+      "name": "梁记小馆",
+      "avg_price": 80,
+      "distance_km": 3.97,
+      "tags": [
+       "有包间"
+      ],
+      "category": "西北菜",
+      "reason": "人均80元，距您3.97公里，有包间"
+     },
+     {
+      "name": "小院餐厅",
+      "avg_price": 90,
+      "distance_km": 2.64,
+      "tags": [
+       "有包间",
+       "可停车",
+       "适合带娃"
+      ],
+      "category": "西北菜",
+      "reason": "人均90元，距您2.64公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，距您0.42公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "梁记小馆",
+      "reason": "人均80元，距您3.97公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "小院餐厅",
+      "reason": "人均90元，距您2.64公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q27",
+    "query": "3个人吃粤菜早茶，人均70",
+    "expect": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "表哥茶餐厅",
+      "avg_price": 55,
+      "distance_km": 0.27,
+      "tags": [
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均55元，距您0.27公里，符合粤菜早茶预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，距您0.27公里，符合粤菜早茶预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q28",
+    "query": "10个人吃火锅，人均130，要包间，不要辣",
+    "expect": {
+     "people": 10,
+     "budget": 130,
+     "max_km": null,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": {
+     "people": 10,
+     "budget": 130,
+     "max_km": null,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "recs": [
+     {
+      "name": "椰子鸡·椰妹",
+      "avg_price": 88,
+      "distance_km": 0.63,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "火锅",
+      "reason": "人均88元，距您0.63公里，有包间且不辣"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，距您0.63公里，有包间且不辣",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q29",
+    "query": "4个人吃烧烤，夜宵，2公里",
+    "expect": {
+     "people": 4,
+     "budget": null,
+     "max_km": 2,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": null,
+     "max_km": 2,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，夜宵烧烤"
+     },
+     {
+      "name": "老码头食堂",
+      "avg_price": 65,
+      "distance_km": 0.93,
+      "tags": [],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.93公里，烧烤夜宵"
+     },
+     {
+      "name": "木屋烧烤",
+      "avg_price": 65,
+      "distance_km": 0.49,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.49公里，夜宵可拼桌"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，夜宵烧烤",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头食堂",
+      "reason": "人均65元，距您0.93公里，烧烤夜宵",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，距您0.49公里，夜宵可拼桌",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q30",
+    "query": "5个人吃快餐简餐，人均35",
+    "expect": {
+     "people": 5,
+     "budget": 35,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 35,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "三味菜馆",
+      "avg_price": 25,
+      "distance_km": 3.14,
+      "tags": [
+       "适合带娃"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均25元，距您3.14公里，符合预算"
+     },
+     {
+      "name": "老乡鸡",
+      "avg_price": 32,
+      "distance_km": 0.08,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均32元，距您0.08公里，符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，距您3.14公里，符合预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，距您0.08公里，符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q31",
+    "query": "一对情侣吃日料，人均250，安静",
+    "expect": {
+     "people": 2,
+     "budget": 250,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 250,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "同福菜馆",
+      "avg_price": 140,
+      "distance_km": 0.3,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均140元，距您0.3公里，安静适合情侣"
+     },
+     {
+      "name": "大娘家餐厅",
+      "avg_price": 120,
+      "distance_km": 4.49,
+      "tags": [
+       "有包间",
+       "夜宵"
+      ],
+      "category": "日料",
+      "reason": "人均120元，距您4.49公里，有包间更私密"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "同福菜馆",
+      "reason": "人均140元，距您0.3公里，安静适合情侣",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大娘家餐厅",
+      "reason": "人均120元，距您4.49公里，有包间更私密",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q32",
+    "query": "8人聚餐，人均85，有包间，3公里内",
+    "expect": {
+     "people": 8,
+     "budget": 85,
+     "max_km": 3,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 8,
+     "budget": 85,
+     "max_km": 3,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "农耕记",
+      "avg_price": 78,
+      "distance_km": 0.76,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "湘菜",
+      "reason": "人均78元，距您0.76公里，有包间"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，有包间"
+     },
+     {
+      "name": "南京大牌档",
+      "avg_price": 82,
+      "distance_km": 0.91,
+      "tags": [
+       "有包间"
+      ],
+      "category": "江浙菜",
+      "reason": "人均82元，距您0.91公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "农耕记",
+      "reason": "人均78元，距您0.76公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南京大牌档",
+      "reason": "人均82元，距您0.91公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q33",
+    "query": "3个人吃潮汕菜，人均90",
+    "expect": {
+     "people": 3,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "一味鲜",
+      "avg_price": 88,
+      "distance_km": 0.84,
+      "tags": [
+       "有包间"
+      ],
+      "category": "潮汕菜",
+      "reason": "人均88元，距您0.84公里"
+     },
+     {
+      "name": "阿婆菜馆",
+      "avg_price": 65,
+      "distance_km": 1.05,
+      "tags": [],
+      "category": "潮汕菜",
+      "reason": "人均65元，距您1.05公里"
+     },
+     {
+      "name": "食光食堂",
+      "avg_price": 65,
+      "distance_km": 0.66,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "潮汕菜",
+      "reason": "人均65元，距您0.66公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "一味鲜",
+      "reason": "人均88元，距您0.84公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆菜馆",
+      "reason": "人均65元，距您1.05公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "食光食堂",
+      "reason": "人均65元，距您0.66公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q34",
+    "query": "20人团队聚餐，人均120，要包间，可停车",
+    "expect": {
+     "people": 20,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 20,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里，有包间可停车"
+     },
+     {
+      "name": "锦记小馆",
+      "avg_price": 115,
+      "distance_km": 2.59,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均115元，距您2.59公里，有包间可停车"
+     },
+     {
+      "name": "八合里海记",
+      "avg_price": 92,
+      "distance_km": 0.58,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均92元，距您0.58公里，有包间可停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记小馆",
+      "reason": "人均115元，距您2.59公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，距您0.58公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q35",
+    "query": "2个人吃湘菜，人均60，1.5公里内",
+    "expect": {
+     "people": 2,
+     "budget": 60,
+     "max_km": 1.5,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 60,
+     "max_km": 1.5,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "recs": [],
+    "error": null,
+    "rec_detail": [],
+    "n_ok": 0
+   },
+   {
+    "id": "Q36",
+    "query": "想找适合带娃的餐厅，4个人，人均70",
+    "expect": {
+     "people": 4,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "avg_price": 68,
+      "distance_km": 0.55,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "湘菜",
+      "reason": "人均68元，距您0.55公里，可拼桌适合带娃"
+     },
+     {
+      "name": "十三行饭店",
+      "avg_price": 55,
+      "distance_km": 4.0,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "夜宵"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均55元，距您4.0公里，有包间适合带娃"
+     },
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里，素食清淡适合带娃"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "人均68元，距您0.55公里，可拼桌适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "十三行饭店",
+      "reason": "人均55元，距您4.0公里，有包间适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里，素食清淡适合带娃",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q37",
+    "query": "6个人吃粤菜，人均100，要发票",
+    "expect": {
+     "people": 6,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "陶陶居",
+      "avg_price": 96,
+      "distance_km": 0.74,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "粤菜",
+      "reason": "人均96元，距您0.74公里"
+     },
+     {
+      "name": "点都德",
+      "avg_price": 72,
+      "distance_km": 0.65,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "粤菜",
+      "reason": "人均72元，距您0.65公里"
+     },
+     {
+      "name": "大鸽饭",
+      "avg_price": 88,
+      "distance_km": 1.42,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "粤菜",
+      "reason": "人均88元，距您1.42公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，距您0.74公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "点都德",
+      "reason": "人均72元，距您0.65公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，距您1.42公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q38",
+    "query": "4个人吃海鲜，人均200，5公里内，有包间",
+    "expect": {
+     "people": 4,
+     "budget": 200,
+     "max_km": 5,
+     "need_room": true,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 200,
+     "max_km": 5,
+     "need_room": true,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "avg_price": 188,
+      "distance_km": 2.04,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "海鲜",
+      "reason": "人均188元，距您2.04公里，有包间"
+     },
+     {
+      "name": "得闲食堂",
+      "avg_price": 135,
+      "distance_km": 4.45,
+      "tags": [
+       "有包间",
+       "可开发票",
+       "可拼桌"
+      ],
+      "category": "海鲜",
+      "reason": "人均135元，距您4.45公里，有包间"
+     },
+     {
+      "name": "蟹将军",
+      "avg_price": 156,
+      "distance_km": 1.12,
+      "tags": [
+       "有包间"
+      ],
+      "category": "海鲜",
+      "reason": "人均156元，距您1.12公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188元，距您2.04公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "人均135元，距您4.45公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "蟹将军",
+      "reason": "人均156元，距您1.12公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q39",
+    "query": "2个人吃西餐，人均120，安静，别太远2公里",
+    "expect": {
+     "people": 2,
+     "budget": 120,
+     "max_km": 2,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 120,
+     "max_km": 2,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "萨莉亚",
+      "avg_price": 42,
+      "distance_km": 0.31,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "西餐",
+      "reason": "人均42元，距您0.31公里，安静且符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "萨莉亚",
+      "reason": "人均42元，距您0.31公里，安静且符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q40",
+    "query": "15人聚餐，人均95，包间，4公里",
+    "expect": {
+     "people": 15,
+     "budget": 95,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 15,
+     "budget": 95,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "八合里海记",
+      "avg_price": 92,
+      "distance_km": 0.58,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均92元，距您0.58公里，有包间"
+     },
+     {
+      "name": "西贝莜面村",
+      "avg_price": 86,
+      "distance_km": 0.42,
+      "tags": [
+       "有包间",
+       "适合带娃"
+      ],
+      "category": "西北菜",
+      "reason": "人均86元，距您0.42公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，距您0.58公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，距您0.42公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q41",
+    "query": "3个人吃面，人均45，附近",
+    "expect": {
+     "people": 3,
+     "budget": 45,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 45,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "锦记菜馆",
+      "avg_price": 40,
+      "distance_km": 4.67,
+      "tags": [],
+      "category": "面食",
+      "reason": "人均40元，距您4.67公里"
+     },
+     {
+      "name": "和府捞面",
+      "avg_price": 45,
+      "distance_km": 0.31,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "面食",
+      "reason": "人均45元，距您0.31公里"
+     },
+     {
+      "name": "喜家德水饺",
+      "avg_price": 40,
+      "distance_km": 0.41,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "面食",
+      "reason": "人均40元，距您0.41公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "锦记菜馆",
+      "reason": "人均40元，距您4.67公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，距您0.31公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，距您0.41公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q42",
+    "query": "8个人吃川菜火锅，人均110，不要香菜",
+    "expect": {
+     "people": 8,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "slots": {
+     "people": 8,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "recs": [
+     {
+      "name": "小龙坎",
+      "avg_price": 105,
+      "distance_km": 0.78,
+      "tags": [
+       "有包间",
+       "夜宵"
+      ],
+      "category": "火锅",
+      "reason": "人均105元，距您0.78公里，符合预算且有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "小龙坎",
+      "reason": "人均105元，距您0.78公里，符合预算且有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q43",
+    "query": "5个人吃粤菜，人均150，安静有包间",
+    "expect": {
+     "people": 5,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "avg_price": 138,
+      "distance_km": 0.91,
+      "tags": [
+       "有包间",
+       "安静",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均138元，距您0.91公里，安静有包间"
+     },
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，距您0.91公里，安静有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q44",
+    "query": "2个人吃烧烤，人均80",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "老码头食堂",
+      "avg_price": 65,
+      "distance_km": 0.93,
+      "tags": [],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.93公里，符合预算且近"
+     },
+     {
+      "name": "得闲小馆",
+      "avg_price": 80,
+      "distance_km": 3.7,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均80元，距您3.7公里，精准匹配预算"
+     },
+     {
+      "name": "木屋烧烤",
+      "avg_price": 65,
+      "distance_km": 0.49,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.49公里，性价比高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "老码头食堂",
+      "reason": "人均65元，距您0.93公里，符合预算且近",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，距您3.7公里，精准匹配预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，距您0.49公里，性价比高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q45",
+    "query": "12人聚餐，人均70，2公里内，不要辣",
+    "expect": {
+     "people": 12,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": {
+     "people": 12,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "recs": [],
+    "error": null,
+    "rec_detail": [],
+    "n_ok": 0
+   },
+   {
+    "id": "Q46",
+    "query": "4个人吃日式烤肉，人均140",
+    "expect": {
+     "people": 4,
+     "budget": 140,
+     "max_km": null,
+     "need_room": null,
+     "category": "日式烤肉",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 140,
+     "max_km": null,
+     "need_room": null,
+     "category": "日式烤肉",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "巷子餐厅",
+      "avg_price": 140,
+      "distance_km": 3.3,
+      "tags": [
+       "安静",
+       "夜宵"
+      ],
+      "category": "日式烤肉",
+      "reason": "人均140元，距您3.3公里"
+     },
+     {
+      "name": "南山食府",
+      "avg_price": 140,
+      "distance_km": 1.19,
+      "tags": [
+       "宠物友好"
+      ],
+      "category": "日式烤肉",
+      "reason": "人均140元，距您1.19公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "巷子餐厅",
+      "reason": "人均140元，距您3.3公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南山食府",
+      "reason": "人均140元，距您1.19公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q47",
+    "query": "6个人吃江浙菜，人均75，3公里，有包间",
+    "expect": {
+     "people": 6,
+     "budget": 75,
+     "max_km": 3,
+     "need_room": true,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 75,
+     "max_km": 3,
+     "need_room": true,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "绿茶餐厅",
+      "avg_price": 69,
+      "distance_km": 0.58,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "江浙菜",
+      "reason": "人均69元，距您0.58公里，有包间"
+     },
+     {
+      "name": "家味小馆",
+      "avg_price": 50,
+      "distance_km": 2.68,
+      "tags": [
+       "有包间",
+       "安静"
+      ],
+      "category": "江浙菜",
+      "reason": "人均50元，距您2.68公里，有包间"
+     },
+     {
+      "name": "锦记食府",
+      "avg_price": 55,
+      "distance_km": 1.03,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "可开发票"
+      ],
+      "category": "江浙菜",
+      "reason": "人均55元，距您1.03公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，距您0.58公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味小馆",
+      "reason": "人均50元，距您2.68公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记食府",
+      "reason": "人均55元，距您1.03公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q48",
+    "query": "3个人吃素食，人均60",
+    "expect": {
+     "people": 3,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里"
+     },
+     {
+      "name": "粤海食堂",
+      "avg_price": 60,
+      "distance_km": 1.7,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您1.7公里"
+     },
+     {
+      "name": "家味私厨",
+      "avg_price": 40,
+      "distance_km": 3.35,
+      "tags": [
+       "有包间",
+       "安静"
+      ],
+      "category": "素食",
+      "reason": "人均40元，距您3.35公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤海食堂",
+      "reason": "人均60元，距您1.7公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味私厨",
+      "reason": "人均40元，距您3.35公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q49",
+    "query": "25人婚宴聚餐，人均250，要包间停车发票",
+    "expect": {
+     "people": 25,
+     "budget": 250,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 25,
+     "budget": 250,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间可停车可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间可停车可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q50",
+    "query": "2个人吃东南亚菜，人均80，2公里内",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": 2,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 80,
+     "max_km": 2,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "西贡妈妈",
+      "avg_price": 76,
+      "distance_km": 0.82,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均76元，距您0.82公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贡妈妈",
+      "reason": "人均76元，距您0.82公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q51",
+    "query": "附近吃个快餐，一个人，25",
+    "expect": {
+     "people": 1,
+     "budget": 25,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 1,
+     "budget": 25,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "三味菜馆",
+      "avg_price": 25,
+      "distance_km": 3.14,
+      "tags": [
+       "适合带娃"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均25元，距您3.1公里，符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，距您3.1公里，符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q52",
+    "query": "10个人吃海鲜，人均180，6公里内",
+    "expect": {
+     "people": 10,
+     "budget": 180,
+     "max_km": 6,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 10,
+     "budget": 180,
+     "max_km": 6,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "半山食府",
+      "avg_price": 110,
+      "distance_km": 1.94,
+      "tags": [],
+      "category": "海鲜",
+      "reason": "人均110元，距您1.94公里"
+     },
+     {
+      "name": "得闲食堂",
+      "avg_price": 135,
+      "distance_km": 4.45,
+      "tags": [
+       "有包间",
+       "可开发票",
+       "可拼桌"
+      ],
+      "category": "海鲜",
+      "reason": "人均135元，距您4.45公里"
+     },
+     {
+      "name": "蟹将军",
+      "avg_price": 156,
+      "distance_km": 1.12,
+      "tags": [
+       "有包间"
+      ],
+      "category": "海鲜",
+      "reason": "人均156元，距您1.12公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "半山食府",
+      "reason": "人均110元，距您1.94公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "人均135元，距您4.45公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "蟹将军",
+      "reason": "人均156元，距您1.12公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q53",
+    "query": "4个人吃西北菜，人均85",
+    "expect": {
+     "people": 4,
+     "budget": 85,
+     "max_km": null,
+     "need_room": null,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 85,
+     "max_km": null,
+     "need_room": null,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "李记餐厅",
+      "avg_price": 70,
+      "distance_km": 3.68,
+      "tags": [],
+      "category": "西北菜",
+      "reason": "人均70元，距您3.68公里，符合预算"
+     },
+     {
+      "name": "一品餐厅",
+      "avg_price": 65,
+      "distance_km": 3.23,
+      "tags": [
+       "宠物友好",
+       "适合带娃"
+      ],
+      "category": "西北菜",
+      "reason": "人均65元，距您3.23公里，符合预算"
+     },
+     {
+      "name": "梁记小馆",
+      "avg_price": 80,
+      "distance_km": 3.97,
+      "tags": [
+       "有包间"
+      ],
+      "category": "西北菜",
+      "reason": "人均80元，距您3.97公里，符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "李记餐厅",
+      "reason": "人均70元，距您3.68公里，符合预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "一品餐厅",
+      "reason": "人均65元，距您3.23公里，符合预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "梁记小馆",
+      "reason": "人均80元，距您3.97公里，符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q54",
+    "query": "6个人喝咖啡，人均40，附近",
+    "expect": {
+     "people": 6,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "喜茶",
+      "avg_price": 28,
+      "distance_km": 0.23,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "甜品咖啡",
+      "reason": "人均28元，距您0.23公里，可拼桌适合6人"
+     },
+     {
+      "name": "家味食府",
+      "avg_price": 35,
+      "distance_km": 5.02,
+      "tags": [],
+      "category": "甜品咖啡",
+      "reason": "人均35元，距您5.02公里，符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，距您0.23公里，可拼桌适合6人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，距您5.02公里，符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q55",
+    "query": "3个人吃粤菜，人均65，1公里",
+    "expect": {
+     "people": 3,
+     "budget": 65,
+     "max_km": 1,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 65,
+     "max_km": 1,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "表哥茶餐厅",
+      "avg_price": 55,
+      "distance_km": 0.27,
+      "tags": [
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均55元，距您0.27公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，距您0.27公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q56",
+    "query": "8个人吃火锅，人均90，有包间，3公里",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "椰子鸡·椰妹",
+      "avg_price": 88,
+      "distance_km": 0.63,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "火锅",
+      "reason": "人均88元，距您0.63公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，距您0.63公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q57",
+    "query": "2个人吃川菜，人均70，不要辣",
+    "expect": {
+     "people": 2,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": {
+     "people": 2,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "recs": [
+     {
+      "name": "陈麻婆豆腐",
+      "avg_price": 58,
+      "distance_km": 0.19,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "川菜",
+      "reason": "人均58元，距您0.19公里，不辣川菜"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，距您0.19公里，不辣川菜",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q58",
+    "query": "18人聚餐，人均130，包间，5公里",
+    "expect": {
+     "people": 18,
+     "budget": 130,
+     "max_km": 5,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 18,
+     "budget": 130,
+     "max_km": 5,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间"
+     },
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里，有包间"
+     },
+     {
+      "name": "锦记小馆",
+      "avg_price": 115,
+      "distance_km": 2.59,
+      "tags": [
+       "有包间",
+       "可拼桌",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均115元，距您2.59公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记小馆",
+      "reason": "人均115元，距您2.59公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q59",
+    "query": "5个人吃烧烤，人均100，夜宵，有包间",
+    "expect": {
+     "people": 5,
+     "budget": 100,
+     "max_km": null,
+     "need_room": true,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 100,
+     "max_km": null,
+     "need_room": true,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，夜宵且有包间"
+     },
+     {
+      "name": "得闲小馆",
+      "avg_price": 80,
+      "distance_km": 3.7,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "烧烤",
+      "reason": "人均80元，距您3.7公里，有包间"
+     },
+     {
+      "name": "锦记饭店",
+      "avg_price": 55,
+      "distance_km": 6.56,
+      "tags": [
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均55元，距您6.56公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，夜宵且有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，距您3.7公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记饭店",
+      "reason": "人均55元，距您6.56公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q60",
+    "query": "4个人吃潮汕牛肉火锅，人均110",
+    "expect": {
+     "people": 4,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "禾田餐厅",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均110元，距您1.16公里"
+     },
+     {
+      "name": "八合里海记",
+      "avg_price": 92,
+      "distance_km": 0.58,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均92元，距您0.58公里"
+     },
+     {
+      "name": "南山饭店",
+      "avg_price": 100,
+      "distance_km": 0.62,
+      "tags": [],
+      "category": "潮汕牛肉火锅",
+      "reason": "人均100元，距您0.62公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "禾田餐厅",
+      "reason": "人均110元，距您1.16公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，距您0.58公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南山饭店",
+      "reason": "人均100元，距您0.62公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q61",
+    "query": "一个人吃面，40以内，附近",
+    "expect": {
+     "people": 1,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 1,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "遇见小面",
+      "avg_price": 38,
+      "distance_km": 0.19,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "面食",
+      "reason": "人均38元，距您0.19公里"
+     },
+     {
+      "name": "喜家德水饺",
+      "avg_price": 40,
+      "distance_km": 0.41,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "面食",
+      "reason": "人均40元，距您0.41公里"
+     },
+     {
+      "name": "锦记菜馆",
+      "avg_price": 40,
+      "distance_km": 4.67,
+      "tags": [],
+      "category": "面食",
+      "reason": "人均40元，距您4.67公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，距您0.19公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，距您0.41公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记菜馆",
+      "reason": "人均40元，距您4.67公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q62",
+    "query": "7个人吃湘菜，人均80，4公里",
+    "expect": {
+     "people": 7,
+     "budget": 80,
+     "max_km": 4,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 7,
+     "budget": 80,
+     "max_km": 4,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "avg_price": 68,
+      "distance_km": 0.55,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "湘菜",
+      "reason": "人均68元，距您0.55公里，价格合适可拼桌"
+     },
+     {
+      "name": "农耕记",
+      "avg_price": 78,
+      "distance_km": 0.76,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "湘菜",
+      "reason": "人均78元，距您0.76公里，有包间适合7人"
+     },
+     {
+      "name": "老码头菜馆",
+      "avg_price": 70,
+      "distance_km": 1.31,
+      "tags": [],
+      "category": "湘菜",
+      "reason": "人均70元，距您1.31公里，符合预算距离"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "人均68元，距您0.55公里，价格合适可拼桌",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "农耕记",
+      "reason": "人均78元，距您0.76公里，有包间适合7人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头菜馆",
+      "reason": "人均70元，距您1.31公里，符合预算距离",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q63",
+    "query": "2个人吃海鲜，人均300",
+    "expect": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "小院酒家",
+      "avg_price": 240,
+      "distance_km": 2.01,
+      "tags": [
+       "适合带娃",
+       "可开发票"
+      ],
+      "category": "海鲜",
+      "reason": "人均240元，距您2.01公里"
+     },
+     {
+      "name": "黄沙水产",
+      "avg_price": 188,
+      "distance_km": 2.04,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "海鲜",
+      "reason": "人均188元，距您2.04公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "小院酒家",
+      "reason": "人均240元，距您2.01公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "黄沙水产",
+      "reason": "人均188元，距您2.04公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q64",
+    "query": "10人聚会，人均60，不要香菜，3公里",
+    "expect": {
+     "people": 10,
+     "budget": 60,
+     "max_km": 3,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "slots": {
+     "people": 10,
+     "budget": 60,
+     "max_km": 3,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "recs": [
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里，素食无香菜"
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "avg_price": 58,
+      "distance_km": 0.19,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "川菜",
+      "reason": "人均58元，距您0.19公里，可拼桌"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里，素食无香菜",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，距您0.19公里，可拼桌",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q65",
+    "query": "3个人吃江浙菜，人均70",
+    "expect": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "绿茶餐厅",
+      "avg_price": 69,
+      "distance_km": 0.58,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "江浙菜",
+      "reason": "人均69元，距您0.58公里"
+     },
+     {
+      "name": "家味小馆",
+      "avg_price": 50,
+      "distance_km": 2.68,
+      "tags": [
+       "有包间",
+       "安静"
+      ],
+      "category": "江浙菜",
+      "reason": "人均50元，距您2.68公里"
+     },
+     {
+      "name": "锦记食府",
+      "avg_price": 55,
+      "distance_km": 1.03,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "可开发票"
+      ],
+      "category": "江浙菜",
+      "reason": "人均55元，距您1.03公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，距您0.58公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味小馆",
+      "reason": "人均50元，距您2.68公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "锦记食府",
+      "reason": "人均55元，距您1.03公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q66",
+    "query": "12个人吃粤菜，人均120，有包间，可停车",
+    "expect": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "广州酒家",
+      "avg_price": 110,
+      "distance_km": 1.16,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均110元，距您1.16公里，有包间可停车"
+     },
+     {
+      "name": "陶陶居",
+      "avg_price": 96,
+      "distance_km": 0.74,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "粤菜",
+      "reason": "人均96元，距您0.74公里，有包间可停车"
+     },
+     {
+      "name": "惠食佳",
+      "avg_price": 118,
+      "distance_km": 1.3,
+      "tags": [
+       "有包间",
+       "安静"
+      ],
+      "category": "粤菜",
+      "reason": "人均118元，距您1.3公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，距您1.16公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，距您0.74公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "惠食佳",
+      "reason": "人均118元，距您1.3公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q67",
+    "query": "5个人吃东南亚菜，人均110，有包间",
+    "expect": {
+     "people": 5,
+     "budget": 110,
+     "max_km": null,
+     "need_room": true,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 110,
+     "max_km": null,
+     "need_room": true,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "泰香米",
+      "avg_price": 108,
+      "distance_km": 0.71,
+      "tags": [
+       "有包间"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均108元，距您0.71公里，有包间"
+     },
+     {
+      "name": "半山菜馆",
+      "avg_price": 105,
+      "distance_km": 5.82,
+      "tags": [
+       "有包间",
+       "夜宵"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均105元，距您5.82公里，有包间"
+     },
+     {
+      "name": "码头食府",
+      "avg_price": 90,
+      "distance_km": 0.74,
+      "tags": [
+       "有包间"
+      ],
+      "category": "东南亚菜",
+      "reason": "人均90元，距您0.74公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "泰香米",
+      "reason": "人均108元，距您0.71公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "半山菜馆",
+      "reason": "人均105元，距您5.82公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "码头食府",
+      "reason": "人均90元，距您0.74公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q68",
+    "query": "2个人吃素食，人均80，安静",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "巷子食府",
+      "avg_price": 60,
+      "distance_km": 2.8,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您2.8公里，符合素食和预算"
+     },
+     {
+      "name": "素菜馆·慈心",
+      "avg_price": 68,
+      "distance_km": 0.32,
+      "tags": [
+       "安静",
+       "有包间"
+      ],
+      "category": "素食",
+      "reason": "人均68元，距您0.32公里，安静适合二人"
+     },
+     {
+      "name": "粤海食堂",
+      "avg_price": 60,
+      "distance_km": 1.7,
+      "tags": [],
+      "category": "素食",
+      "reason": "人均60元，距您1.7公里，符合素食和预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "巷子食府",
+      "reason": "人均60元，距您2.8公里，符合素食和预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "素菜馆·慈心",
+      "reason": "人均68元，距您0.32公里，安静适合二人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤海食堂",
+      "reason": "人均60元，距您1.7公里，符合素食和预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q69",
+    "query": "9个人吃火锅，人均100，2公里",
+    "expect": {
+     "people": 9,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": {
+     "people": 9,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "椰子鸡·椰妹",
+      "avg_price": 88,
+      "distance_km": 0.63,
+      "tags": [
+       "适合带娃",
+       "有包间"
+      ],
+      "category": "火锅",
+      "reason": "人均88元，距您0.63公里"
+     },
+     {
+      "name": "呷哺呷哺",
+      "avg_price": 58,
+      "distance_km": 0.4,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "火锅",
+      "reason": "人均58元，距您0.4公里"
+     },
+     {
+      "name": "半山私厨",
+      "avg_price": 70,
+      "distance_km": 1.94,
+      "tags": [],
+      "category": "火锅",
+      "reason": "人均70元，距您1.94公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，距您0.63公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "呷哺呷哺",
+      "reason": "人均58元，距您0.4公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "半山私厨",
+      "reason": "人均70元，距您1.94公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q70",
+    "query": "4个人吃西餐，人均180，有包间",
+    "expect": {
+     "people": 4,
+     "budget": 180,
+     "max_km": null,
+     "need_room": true,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 180,
+     "max_km": null,
+     "need_room": true,
+     "category": "西餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "阿婆酒家",
+      "avg_price": 180,
+      "distance_km": 6.68,
+      "tags": [
+       "有包间",
+       "可拼桌"
+      ],
+      "category": "西餐",
+      "reason": "人均180元，距您6.68公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "阿婆酒家",
+      "reason": "人均180元，距您6.68公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q71",
+    "query": "30人公司聚餐，人均160，包间，可停车发票",
+    "expect": {
+     "people": 30,
+     "budget": 160,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 30,
+     "budget": 160,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "海底捞",
+      "avg_price": 135,
+      "distance_km": 0.38,
+      "tags": [
+       "有包间",
+       "适合带娃",
+       "夜宵",
+       "可开发票"
+      ],
+      "category": "火锅",
+      "reason": "人均135元，距您0.38公里，有包间可开发票"
+     },
+     {
+      "name": "炳胜品味",
+      "avg_price": 128,
+      "distance_km": 0.5,
+      "tags": [
+       "有包间",
+       "可停车",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均128元，距您0.5公里，有包间可停车可开发票"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "avg_price": 138,
+      "distance_km": 0.91,
+      "tags": [
+       "有包间",
+       "安静",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均138元，距您0.91公里，有包间可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，距您0.38公里，有包间可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，距您0.5公里，有包间可停车可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，距您0.91公里，有包间可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q72",
+    "query": "2个人吃日料，人均60",
+    "expect": {
+     "people": 2,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "客味私厨",
+      "avg_price": 80,
+      "distance_km": 2.22,
+      "tags": [
+       "可开发票"
+      ],
+      "category": "日料",
+      "reason": "人均80元，距您2.22公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "客味私厨",
+      "reason": "人均80元，距您2.22公里",
+      "ok": false,
+      "notes": [
+       "超预算(80>60)"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q73",
+    "query": "6个人吃快餐简餐，人均30",
+    "expect": {
+     "people": 6,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": {
+     "people": 6,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "三味菜馆",
+      "avg_price": 25,
+      "distance_km": 3.14,
+      "tags": [
+       "适合带娃"
+      ],
+      "category": "快餐简餐",
+      "reason": "人均25元，距您3.14公里，符合预算"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，距您3.14公里，符合预算",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q74",
+    "query": "8个人吃烧烤，人均90，3公里，不要辣",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "recs": [
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，不辣适合8人"
+     },
+     {
+      "name": "老码头食堂",
+      "avg_price": 65,
+      "distance_km": 0.93,
+      "tags": [],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.93公里，不辣适合8人"
+     },
+     {
+      "name": "木屋烧烤",
+      "avg_price": 65,
+      "distance_km": 0.49,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "烧烤",
+      "reason": "人均65元，距您0.49公里，不辣适合8人"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，不辣适合8人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头食堂",
+      "reason": "人均65元，距您0.93公里，不辣适合8人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，距您0.49公里，不辣适合8人",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q75",
+    "query": "3个人吃西北菜，人均75，有包间",
+    "expect": {
+     "people": 3,
+     "budget": 75,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 3,
+     "budget": 75,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "recs": [],
+    "error": null,
+    "rec_detail": [],
+    "n_ok": 0
+   },
+   {
+    "id": "Q76",
+    "query": "5个人吃潮汕菜，人均100，2公里",
+    "expect": {
+     "people": 5,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 5,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "一味鲜",
+      "avg_price": 88,
+      "distance_km": 0.84,
+      "tags": [
+       "有包间"
+      ],
+      "category": "潮汕菜",
+      "reason": "人均88元，距您0.84公里"
+     },
+     {
+      "name": "阿婆菜馆",
+      "avg_price": 65,
+      "distance_km": 1.05,
+      "tags": [],
+      "category": "潮汕菜",
+      "reason": "人均65元，距您1.05公里"
+     },
+     {
+      "name": "食光食堂",
+      "avg_price": 65,
+      "distance_km": 0.66,
+      "tags": [
+       "夜宵",
+       "可拼桌"
+      ],
+      "category": "潮汕菜",
+      "reason": "人均65元，距您0.66公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "一味鲜",
+      "reason": "人均88元，距您0.84公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆菜馆",
+      "reason": "人均65元，距您1.05公里",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "食光食堂",
+      "reason": "人均65元，距您0.66公里",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q77",
+    "query": "15人聚餐，人均85，有包间，4公里，可停车",
+    "expect": {
+     "people": 15,
+     "budget": 85,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": {
+     "people": 15,
+     "budget": 85,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "农耕记",
+      "avg_price": 78,
+      "distance_km": 0.76,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "湘菜",
+      "reason": "人均78元，距您0.76公里，有包间可停车"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "avg_price": 82,
+      "distance_km": 0.83,
+      "tags": [
+       "夜宵",
+       "有包间"
+      ],
+      "category": "烧烤",
+      "reason": "人均82元，距您0.83公里，有包间满足15人"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "农耕记",
+      "reason": "人均78元，距您0.76公里，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，距您0.83公里，有包间满足15人",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q78",
+    "query": "2个人吃甜品，人均35，1公里",
+    "expect": {
+     "people": 2,
+     "budget": 35,
+     "max_km": 1,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": {
+     "people": 2,
+     "budget": 35,
+     "max_km": 1,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "喜茶",
+      "avg_price": 28,
+      "distance_km": 0.23,
+      "tags": [
+       "可拼桌"
+      ],
+      "category": "甜品咖啡",
+      "reason": "人均28元，距您0.23公里，符合预算和距离"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，距您0.23公里，符合预算和距离",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q79",
+    "query": "11个人吃川菜，人均95，有包间",
+    "expect": {
+     "people": 11,
+     "budget": 95,
+     "max_km": null,
+     "need_room": true,
+     "category": "川菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 11,
+     "budget": 95,
+     "max_km": null,
+     "need_room": true,
+     "category": "川菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "客味小馆",
+      "avg_price": 80,
+      "distance_km": 7.66,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "安静"
+      ],
+      "category": "川菜",
+      "reason": "人均80元，距您7.66公里，有包间"
+     },
+     {
+      "name": "码头饭店",
+      "avg_price": 80,
+      "distance_km": 4.3,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "川菜",
+      "reason": "人均80元，距您4.3公里，有包间"
+     },
+     {
+      "name": "梁记饭店",
+      "avg_price": 65,
+      "distance_km": 7.03,
+      "tags": [
+       "有包间",
+       "宠物友好",
+       "可开发票"
+      ],
+      "category": "川菜",
+      "reason": "人均65元，距您7.03公里，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "客味小馆",
+      "reason": "人均80元，距您7.66公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "码头饭店",
+      "reason": "人均80元，距您4.3公里，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "梁记饭店",
+      "reason": "人均65元，距您7.03公里，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q80",
+    "query": "4个人吃粤菜，人均90，3公里，安静",
+    "expect": {
+     "people": 4,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": {
+     "people": 4,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "recs": [
+     {
+      "name": "点都德",
+      "avg_price": 72,
+      "distance_km": 0.65,
+      "tags": [
+       "可拼桌",
+       "适合带娃"
+      ],
+      "category": "粤菜",
+      "reason": "人均72元，距您0.65公里，符合预算和距离"
+     },
+     {
+      "name": "大鸽饭",
+      "avg_price": 88,
+      "distance_km": 1.42,
+      "tags": [
+       "有包间",
+       "可停车"
+      ],
+      "category": "粤菜",
+      "reason": "人均88元，距您1.42公里，符合预算和距离"
+     },
+     {
+      "name": "表哥茶餐厅",
+      "avg_price": 55,
+      "distance_km": 0.27,
+      "tags": [
+       "可拼桌",
+       "可开发票"
+      ],
+      "category": "粤菜",
+      "reason": "人均55元，距您0.27公里，符合预算和距离"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，距您0.65公里，符合预算和距离",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，距您1.42公里，符合预算和距离",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，距您0.27公里，符合预算和距离",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   }
+  ]
+ },
+ "v1": {
+  "version": "v1",
+  "n_queries": 80,
+  "errors": 0,
+  "slot_field_acc": {
+   "people": 0.0,
+   "budget": 0.0,
+   "max_km": 0.0,
+   "need_room": 0.0,
+   "category": 0.0,
+   "avoid": 0.0
+  },
+  "slot_all_correct": 0.0,
+  "hard_constraint_pass": 59.2,
+  "hallucination_rate": 11.2,
+  "usable_rate": 60.0,
+  "avg_recs": 3.0,
+  "details": [
+   {
+    "id": "Q01",
+    "query": "我们12个人聚餐，人均别超过120，要有包间",
+    "expect": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间，粤菜口碑好"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，有包间，老字号粤菜"
+     },
+     {
+      "name": "惠食佳",
+      "reason": "人均118元，有包间，安静粤菜"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间，粤菜口碑好",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，有包间，老字号粤菜",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "惠食佳",
+      "reason": "人均118元，有包间，安静粤菜",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q02",
+    "query": "6个人吃火锅，人均100以内，3公里内",
+    "expect": {
+     "people": 6,
+     "budget": 100,
+     "max_km": 3,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅，适合6人"
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清爽火锅，有包间可聚餐"
+     },
+     {
+      "name": "呷哺呷哺",
+      "reason": "人均58元，高性价比连锁火锅"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅，适合6人",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清爽火锅，有包间可聚餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "呷哺呷哺",
+      "reason": "人均58元，高性价比连锁火锅",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q03",
+    "query": "两个人约会，想安静点的西餐，人均200左右",
+    "expect": {
+     "people": 2,
+     "budget": 200,
+     "max_km": null,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "王品牛排",
+      "reason": "西餐，人均268元，安静有包间"
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，环境安静"
+     },
+     {
+      "name": "阿婆酒家",
+      "reason": "西餐，人均180元，有包间安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "王品牛排",
+      "reason": "西餐，人均268元，安静有包间",
+      "ok": false,
+      "notes": [
+       "超预算(268>200)"
+      ]
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，环境安静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆酒家",
+      "reason": "西餐，人均180元，有包间安静",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q04",
+    "query": "公司团建20人，预算人均150，要能开发票有包间",
+    "expect": {
+     "people": 20,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜高端，有包间可开发票"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+发票齐全"
+     },
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，服务好有包间，支持开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜高端，有包间可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+发票齐全",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，服务好有包间，支持开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q05",
+    "query": "附近有什么好吃的粤菜，4个人，人均80",
+    "expect": {
+     "people": 4,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜首选，性价比高"
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤菜正宗，有包间停车"
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，粤菜特色，环境舒适"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜首选，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤菜正宗，有包间停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，粤菜特色，环境舒适",
+      "ok": false,
+      "notes": [
+       "超预算(88>80)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q06",
+    "query": "带娃吃饭，5个人，要有包间，别太辣",
+    "expect": {
+     "people": 5,
+     "budget": null,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，粤菜系不辣，有包间且适合带娃"
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清甜不辣，有包间且明确适合带娃"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，经典粤菜不辣，有包间评分高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞",
+      "reason": "人均135元，粤菜系不辣，有包间且适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清甜不辣，有包间且明确适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，经典粤菜不辣，有包间评分高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q07",
+    "query": "深夜想吃烧烤，两个人，别太远1公里内",
+    "expect": {
+     "people": 2,
+     "budget": null,
+     "max_km": 1,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，有夜宵标签"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤+夜宵，评分4.3"
+     },
+     {
+      "name": "老码头饭店",
+      "reason": "人均85元，烧烤品类，宠物友好"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，有夜宵标签",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤+夜宵，评分4.3",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头饭店",
+      "reason": "人均85元，烧烤品类，宠物友好",
+      "ok": false,
+      "notes": [
+       "超距离(2.93>1km)",
+       "价格说错(85≠180)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q08",
+    "query": "10人聚餐，人均60，学校附近就行",
+    "expect": {
+     "people": 10,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，粤菜实惠，适合学生聚餐"
+     },
+     {
+      "name": "湘满楼",
+      "reason": "人均62元，湘菜口味佳，学校周边常见"
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，川菜经典，性价比高易达"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，粤菜实惠，适合学生聚餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "湘满楼",
+      "reason": "人均62元，湘菜口味佳，学校周边常见",
+      "ok": false,
+      "notes": [
+       "超预算(62>60)"
+      ]
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，川菜经典，性价比高易达",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q09",
+    "query": "想吃日料，人均300以内，2人",
+    "expect": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "争鲜回转寿司",
+      "reason": "日料，人均78元，性价比高"
+     },
+     {
+      "name": "同福菜馆",
+      "reason": "日料，人均140元，包间安静"
+     },
+     {
+      "name": "客味私厨",
+      "reason": "日料，人均80元，评分4.7高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "争鲜回转寿司",
+      "reason": "日料，人均78元，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "同福菜馆",
+      "reason": "日料，人均140元，包间安静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "客味私厨",
+      "reason": "日料，人均80元，评分4.7高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q10",
+    "query": "8个人吃湘菜，人均90，要包间",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "文和友龙虾馆",
+      "reason": "湘菜，人均105元，有包间"
+     },
+     {
+      "name": "农耕记",
+      "reason": "湘菜，人均78元，有包间"
+     },
+     {
+      "name": "好味饭店",
+      "reason": "湘菜，人均90元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "文和友龙虾馆",
+      "reason": "湘菜，人均105元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(105>90)"
+      ]
+     },
+     {
+      "name": "农耕记",
+      "reason": "湘菜，人均78元，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "好味饭店",
+      "reason": "湘菜，人均90元，有包间",
+      "ok": false,
+      "notes": [
+       "无包间",
+       "虚构包间"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q11",
+    "query": "4个人吃川菜，2公里内，人均70",
+    "expect": {
+     "people": 4,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "川菜，人均58元，2公里内"
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，2公里内"
+     },
+     {
+      "name": "梁记饭店",
+      "reason": "川菜，人均65元，2公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "川菜，人均58元，2公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(2.0≠0.19km)"
+      ]
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，2公里内",
+      "ok": false,
+      "notes": [
+       "超预算(80>70)",
+       "超距离(7.66>2km)",
+       "距离说错(2.0≠7.66km)"
+      ]
+     },
+     {
+      "name": "梁记饭店",
+      "reason": "川菜，人均65元，2公里内",
+      "ok": false,
+      "notes": [
+       "超距离(7.03>2km)",
+       "距离说错(2.0≠7.03km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q12",
+    "query": "请客户吃饭，6个人，人均300，要安静有包间",
+    "expect": {
+     "people": 6,
+     "budget": 300,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "鮨一",
+      "reason": "人均320元，安静有包间，高端日料"
+     },
+     {
+      "name": "王品牛排",
+      "reason": "人均268元，安静有包间，西餐标杆"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，安静有包间，粤菜精品"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "鮨一",
+      "reason": "人均320元，安静有包间，高端日料",
+      "ok": false,
+      "notes": [
+       "超预算(320>300)"
+      ]
+     },
+     {
+      "name": "王品牛排",
+      "reason": "人均268元，安静有包间，西餐标杆",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，安静有包间，粤菜精品",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q13",
+    "query": "3个人随便吃点面，人均40",
+    "expect": {
+     "people": 3,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食专门店，性价比高"
+     },
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，专注面食，口味稳定"
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，适合3人简餐"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食专门店，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，专注面食，口味稳定",
+      "ok": false,
+      "notes": [
+       "超预算(45>40)"
+      ]
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，适合3人简餐",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q14",
+    "query": "15人同学聚会，人均100，5公里内",
+    "expect": {
+     "people": 15,
+     "budget": 100,
+     "max_km": 5,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，粤菜老字号，有包间"
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，粤菜热门，有包间可停车"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，广式经典，有包间可停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，粤菜老字号，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，粤菜热门，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，广式经典，有包间可停车",
+      "ok": false,
+      "notes": [
+       "超预算(110>100)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q15",
+    "query": "两个人吃海鲜，不要太贵，人均150",
+    "expect": {
+     "people": 2,
+     "budget": 150,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "淳味饭店",
+      "reason": "海鲜，人均140，价格适中"
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "海鲜，人均135，评分高有包间"
+     },
+     {
+      "name": "半山食府",
+      "reason": "海鲜，人均110，性价比高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "淳味饭店",
+      "reason": "海鲜，人均140，价格适中",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "海鲜，人均135，评分高有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "半山食府",
+      "reason": "海鲜，人均110，性价比高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q16",
+    "query": "想找素食餐厅，3个人，安静点",
+    "expect": {
+     "people": 3,
+     "budget": null,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食，人均68元，安静有包间"
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60元，评分4.5高且安静"
+     },
+     {
+      "name": "十三行小馆",
+      "reason": "素食，人均105元，评分4.6最高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食，人均68元，安静有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60元，评分4.5高且安静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "十三行小馆",
+      "reason": "素食，人均105元，评分4.6最高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q17",
+    "query": "6个人吃烤肉，人均120，有包间最好",
+    "expect": {
+     "people": 6,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "日式烤肉",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "烧肉先生",
+      "reason": "日式烤肉，人均145元，有包间"
+     },
+     {
+      "name": "巷子餐厅",
+      "reason": "日式烤肉，人均140元，有包间"
+     },
+     {
+      "name": "阿婆餐厅",
+      "reason": "日式烤肉，人均130元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "烧肉先生",
+      "reason": "日式烤肉，人均145元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(145>120)"
+      ]
+     },
+     {
+      "name": "巷子餐厅",
+      "reason": "日式烤肉，人均140元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(140>120)",
+       "无包间",
+       "虚构包间"
+      ]
+     },
+     {
+      "name": "阿婆餐厅",
+      "reason": "日式烤肉，人均130元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(175>120)",
+       "价格说错(130≠175)"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q18",
+    "query": "附近有东南亚菜吗，2人，人均100",
+    "expect": {
+     "people": 2,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108元，口味正宗"
+     },
+     {
+      "name": "西贡妈妈",
+      "reason": "东南亚菜，人均76元，性价比高"
+     },
+     {
+      "name": "半山菜馆",
+      "reason": "东南亚菜，人均105元，环境舒适"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108元，口味正宗",
+      "ok": false,
+      "notes": [
+       "超预算(108>100)"
+      ]
+     },
+     {
+      "name": "西贡妈妈",
+      "reason": "东南亚菜，人均76元，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "半山菜馆",
+      "reason": "东南亚菜，人均105元，环境舒适",
+      "ok": false,
+      "notes": [
+       "超预算(105>100)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q19",
+    "query": "20人年会，人均200，要包间和停车",
+    "expect": {
+     "people": 20,
+     "budget": 200,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188元，有包间和停车，评分4.5"
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，有包间和停车，评分4.7"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，有包间和停车，评分4.6"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188元，有包间和停车，评分4.5",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，有包间和停车，评分4.7",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，有包间和停车，评分4.6",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q20",
+    "query": "一个人吃饭，30块以内",
+    "expect": {
+     "people": 1,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，快餐简餐适合单人快速用餐"
+     },
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐性价比高"
+     },
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，快餐简餐最便宜选择"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，快餐简餐适合单人快速用餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐性价比高",
+      "ok": false,
+      "notes": [
+       "超预算(32>30)"
+      ]
+     },
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，快餐简餐最便宜选择",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q21",
+    "query": "4个人吃潮汕牛肉火锅，人均90",
+    "expect": {
+     "people": 4,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92，符合预算"
+     },
+     {
+      "name": "三味食府",
+      "reason": "潮汕牛肉火锅，人均90，评分4.7"
+     },
+     {
+      "name": "淳味酒家",
+      "reason": "潮汕牛肉火锅，人均90，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92，符合预算",
+      "ok": false,
+      "notes": [
+       "超预算(92>90)"
+      ]
+     },
+     {
+      "name": "三味食府",
+      "reason": "潮汕牛肉火锅，人均90，评分4.7",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "淳味酒家",
+      "reason": "潮汕牛肉火锅，人均90，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q22",
+    "query": "8个人吃江浙菜，人均80，3公里内",
+    "expect": {
+     "people": 8,
+     "budget": 80,
+     "max_km": 3,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，3公里内"
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，3公里内"
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，3公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，3公里内",
+      "ok": false,
+      "notes": [
+       "超预算(82>80)",
+       "距离说错(3.0≠0.91km)"
+      ]
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，3公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(3.0≠0.58km)"
+      ]
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，3公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(3.0≠0.45km)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q23",
+    "query": "想吃夜宵，5个人，人均70，要包间",
+    "expect": {
+     "people": 5,
+     "budget": 70,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，有包间，主打夜宵"
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "人均76元，有包间，夜宵热门"
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，有包间，夜宵可选"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，有包间，主打夜宵",
+      "ok": false,
+      "notes": [
+       "超预算(78>70)"
+      ]
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "人均76元，有包间，夜宵热门",
+      "ok": false,
+      "notes": [
+       "超预算(76>70)"
+      ]
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，有包间，夜宵可选",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q24",
+    "query": "12人聚餐，人均110，别超过4公里",
+    "expect": {
+     "people": 12,
+     "budget": 110,
+     "max_km": 4,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，粤菜老字号，有包间"
+     },
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，粤菜名店，有包间可停车"
+     },
+     {
+      "name": "泰香米",
+      "reason": "人均108元，东南亚风味，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，粤菜老字号，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，粤菜名店，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "泰香米",
+      "reason": "人均108元，东南亚风味，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q25",
+    "query": "2个人吃甜品咖啡，人均50",
+    "expect": {
+     "people": 2,
+     "budget": 50,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "咖啡陪你",
+      "reason": "甜品咖啡，人均48元，安静可拼桌"
+     },
+     {
+      "name": "喜茶",
+      "reason": "甜品咖啡，人均28元，高评分可拼桌"
+     },
+     {
+      "name": "三味私厨",
+      "reason": "甜品咖啡，人均45元，有包间可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "咖啡陪你",
+      "reason": "甜品咖啡，人均48元，安静可拼桌",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜茶",
+      "reason": "甜品咖啡，人均28元，高评分可拼桌",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "三味私厨",
+      "reason": "甜品咖啡，人均45元，有包间可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q26",
+    "query": "6人吃西北菜，人均90，有包间",
+    "expect": {
+     "people": 6,
+     "budget": 90,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，有包间"
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间"
+     },
+     {
+      "name": "粤海餐厅",
+      "reason": "西北菜，人均100元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(95>90)"
+      ]
+     },
+     {
+      "name": "粤海餐厅",
+      "reason": "西北菜，人均100元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(100>90)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q27",
+    "query": "3个人吃粤菜早茶，人均70",
+    "expect": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜早茶首选，评分4.4"
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，高性价比粤式茶点，评分4.1"
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤菜早茶可选，评分4.2"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜早茶首选，评分4.4",
+      "ok": false,
+      "notes": [
+       "超预算(72>70)"
+      ]
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，高性价比粤式茶点，评分4.1",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤菜早茶可选，评分4.2",
+      "ok": false,
+      "notes": [
+       "超预算(78>70)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q28",
+    "query": "10个人吃火锅，人均130，要包间，不要辣",
+    "expect": {
+     "people": 10,
+     "budget": 130,
+     "max_km": null,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，有包间，不辣火锅"
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清甜不辣，有包间"
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅不辣"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，有包间，不辣火锅",
+      "ok": false,
+      "notes": [
+       "超预算(132>130)"
+      ]
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，清甜不辣，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅不辣",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q29",
+    "query": "4个人吃烧烤，夜宵，2公里",
+    "expect": {
+     "people": 4,
+     "budget": null,
+     "max_km": 2,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专做烧烤且有夜宵"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤+夜宵，有包间"
+     },
+     {
+      "name": "老码头饭店",
+      "reason": "人均85元，烧烤夜宵，宠物友好"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专做烧烤且有夜宵",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤+夜宵，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头饭店",
+      "reason": "人均85元，烧烤夜宵，宠物友好",
+      "ok": false,
+      "notes": [
+       "超距离(2.93>2km)",
+       "价格说错(85≠180)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q30",
+    "query": "5个人吃快餐简餐，人均35",
+    "expect": {
+     "people": 5,
+     "budget": 35,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐，适合5人快速用餐"
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食简餐，可拼桌，上菜快"
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡类简餐，性价比高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐，适合5人快速用餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食简餐，可拼桌，上菜快",
+      "ok": false,
+      "notes": [
+       "超预算(38>35)"
+      ]
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡类简餐，性价比高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q31",
+    "query": "一对情侣吃日料，人均250，安静",
+    "expect": {
+     "people": 2,
+     "budget": 250,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "鮨一",
+      "reason": "日料，人均320，安静有包间"
+     },
+     {
+      "name": "同福菜馆",
+      "reason": "日料，人均140，有包间可开发票"
+     },
+     {
+      "name": "粤海食府",
+      "reason": "日料，人均80，有包间且安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "鮨一",
+      "reason": "日料，人均320，安静有包间",
+      "ok": false,
+      "notes": [
+       "超预算(320>250)"
+      ]
+     },
+     {
+      "name": "同福菜馆",
+      "reason": "日料，人均140，有包间可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤海食府",
+      "reason": "日料，人均80，有包间且安静",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q32",
+    "query": "8人聚餐，人均85，有包间，3公里内",
+    "expect": {
+     "people": 8,
+     "budget": 85,
+     "max_km": 3,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，有包间，粤菜"
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，有包间，西北菜"
+     },
+     {
+      "name": "南京大牌档",
+      "reason": "人均82元，有包间，江浙菜"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，有包间，粤菜",
+      "ok": false,
+      "notes": [
+       "超预算(88>85)"
+      ]
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，有包间，西北菜",
+      "ok": false,
+      "notes": [
+       "超预算(86>85)"
+      ]
+     },
+     {
+      "name": "南京大牌档",
+      "reason": "人均82元，有包间，江浙菜",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q33",
+    "query": "3个人吃潮汕菜，人均90",
+    "expect": {
+     "people": 3,
+     "budget": 90,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "一味鲜",
+      "reason": "潮汕菜，人均88元，评分4.3"
+     },
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92元，评分4.5"
+     },
+     {
+      "name": "三味食府",
+      "reason": "潮汕牛肉火锅，人均90元，评分4.7"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "一味鲜",
+      "reason": "潮汕菜，人均88元，评分4.3",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92元，评分4.5",
+      "ok": false,
+      "notes": [
+       "超预算(92>90)"
+      ]
+     },
+     {
+      "name": "三味食府",
+      "reason": "潮汕牛肉火锅，人均90元，评分4.7",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q34",
+    "query": "20人团队聚餐，人均120，要包间，可停车",
+    "expect": {
+     "people": 20,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶配，包间+停车"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+停车"
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "人均120元，潮汕风味，包间+停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶配，包间+停车",
+      "ok": false,
+      "notes": [
+       "超预算(128>120)"
+      ]
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "人均120元，潮汕风味，包间+停车",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q35",
+    "query": "2个人吃湘菜，人均60，1.5公里内",
+    "expect": {
+     "people": 2,
+     "budget": 60,
+     "max_km": 1.5,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "湘菜，人均68元，1.5公里内"
+     },
+     {
+      "name": "湘满楼",
+      "reason": "湘菜，人均62元，1.5公里内"
+     },
+     {
+      "name": "鲜煮意餐厅",
+      "reason": "湘菜，人均60元，1.5公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "湘菜，人均68元，1.5公里内",
+      "ok": false,
+      "notes": [
+       "超预算(68>60)",
+       "距离说错(1.5≠0.55km)"
+      ]
+     },
+     {
+      "name": "湘满楼",
+      "reason": "湘菜，人均62元，1.5公里内",
+      "ok": false,
+      "notes": [
+       "超预算(62>60)",
+       "超距离(1.55>1.5km)"
+      ]
+     },
+     {
+      "name": "鲜煮意餐厅",
+      "reason": "湘菜，人均60元，1.5公里内",
+      "ok": false,
+      "notes": [
+       "超距离(2.58>1.5km)",
+       "距离说错(1.5≠2.58km)"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q36",
+    "query": "想找适合带娃的餐厅，4个人，人均70",
+    "expect": {
+     "people": 4,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，标签明确适合带娃"
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，标签注明适合带娃"
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，标签明确适合带娃"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，标签明确适合带娃",
+      "ok": false,
+      "notes": [
+       "超预算(72>70)"
+      ]
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，标签注明适合带娃",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，标签明确适合带娃",
+      "ok": false,
+      "notes": [
+       "超预算(86>70)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q37",
+    "query": "6个人吃粤菜，人均100，要发票",
+    "expect": {
+     "people": 6,
+     "budget": 100,
+     "max_km": null,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陶陶居",
+      "reason": "粤菜，人均96元，可开发票"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "粤菜，人均110元，可开发票"
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "粤菜，人均128元，可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "粤菜，人均96元，可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "粤菜，人均110元，可开发票",
+      "ok": false,
+      "notes": [
+       "超预算(110>100)"
+      ]
+     },
+     {
+      "name": "炳胜品味",
+      "reason": "粤菜，人均128元，可开发票",
+      "ok": false,
+      "notes": [
+       "超预算(128>100)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q38",
+    "query": "4个人吃海鲜，人均200，5公里内，有包间",
+    "expect": {
+     "people": 4,
+     "budget": 200,
+     "max_km": 5,
+     "need_room": true,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "reason": "海鲜专营，人均188，有包间"
+     },
+     {
+      "name": "淳味小馆",
+      "reason": "海鲜，人均190，有包间"
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "海鲜，人均135，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "海鲜专营，人均188，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "淳味小馆",
+      "reason": "海鲜，人均190，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "海鲜，人均135，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q39",
+    "query": "2个人吃西餐，人均120，安静，别太远2公里",
+    "expect": {
+     "people": 2,
+     "budget": 120,
+     "max_km": 2,
+     "need_room": null,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "一品小馆",
+      "reason": "西餐，人均105元，安静近"
+     },
+     {
+      "name": "食光私厨",
+      "reason": "西餐，人均110元，可停车"
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "一品小馆",
+      "reason": "西餐，人均105元，安静近",
+      "ok": false,
+      "notes": [
+       "超距离(2.09>2km)"
+      ]
+     },
+     {
+      "name": "食光私厨",
+      "reason": "西餐，人均110元，可停车",
+      "ok": false,
+      "notes": [
+       "超距离(5.65>2km)"
+      ]
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，安静",
+      "ok": false,
+      "notes": [
+       "超预算(158>120)"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q40",
+    "query": "15人聚餐，人均95，包间，4公里",
+    "expect": {
+     "people": 15,
+     "budget": 95,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间，粤菜口碑好"
+     },
+     {
+      "name": "太艮堡毋米粥",
+      "reason": "人均95元，有包间，粤式养生粥"
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，有包间，潮汕牛肉火锅"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间，粤菜口碑好",
+      "ok": false,
+      "notes": [
+       "超预算(96>95)"
+      ]
+     },
+     {
+      "name": "太艮堡毋米粥",
+      "reason": "人均95元，有包间，粤式养生粥",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，有包间，潮汕牛肉火锅",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q41",
+    "query": "3个人吃面，人均45，附近",
+    "expect": {
+     "people": 3,
+     "budget": 45,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，面食专营，性价比高"
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，专注面食，口味稳定"
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，适合3人"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，面食专营，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，专注面食，口味稳定",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，适合3人",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q42",
+    "query": "8个人吃川菜火锅，人均110，不要香菜",
+    "expect": {
+     "people": 8,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "大龙燚火锅",
+      "reason": "川味火锅，人均112，评分4.4"
+     },
+     {
+      "name": "蜀九香",
+      "reason": "川菜火锅，人均98，评分4.3"
+     },
+     {
+      "name": "蜀大侠火锅",
+      "reason": "川味火锅，人均118，评分4.2"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "大龙燚火锅",
+      "reason": "川味火锅，人均112，评分4.4",
+      "ok": false,
+      "notes": [
+       "超预算(112>110)"
+      ]
+     },
+     {
+      "name": "蜀九香",
+      "reason": "川菜火锅，人均98，评分4.3",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "蜀大侠火锅",
+      "reason": "川味火锅，人均118，评分4.2",
+      "ok": false,
+      "notes": [
+       "超预算(118>110)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q43",
+    "query": "5个人吃粤菜，人均150，安静有包间",
+    "expect": {
+     "people": 5,
+     "budget": 150,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "粤菜，人均128元，有包间且安静"
+     },
+     {
+      "name": "惠食佳",
+      "reason": "粤菜，人均118元，明确标注安静+包间"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "粤菜，人均138元，有包间且标注安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "粤菜，人均128元，有包间且安静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "惠食佳",
+      "reason": "粤菜，人均118元，明确标注安静+包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "粤菜，人均138元，有包间且标注安静",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q44",
+    "query": "2个人吃烧烤，人均80",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，夜宵友好"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，正宗烧烤，有包间"
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，烧烤品类，可停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，夜宵友好",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，正宗烧烤，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(82>80)"
+      ]
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，烧烤品类，可停车",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q45",
+    "query": "12人聚餐，人均70，2公里内，不要辣",
+    "expect": {
+     "people": 12,
+     "budget": 70,
+     "max_km": 2,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜不辣，可拼桌"
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，江浙菜不辣，有包间"
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，西北菜不辣，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜不辣，可拼桌",
+      "ok": false,
+      "notes": [
+       "超预算(72>70)"
+      ]
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "人均69元，江浙菜不辣，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "西贝莜面村",
+      "reason": "人均86元，西北菜不辣，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(86>70)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q46",
+    "query": "4个人吃日式烤肉，人均140",
+    "expect": {
+     "people": 4,
+     "budget": 140,
+     "max_km": null,
+     "need_room": null,
+     "category": "日式烤肉",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "烧肉先生",
+      "reason": "日式烤肉，人均145，评分4.4"
+     },
+     {
+      "name": "巷子餐厅",
+      "reason": "日式烤肉，人均140，评分4.7"
+     },
+     {
+      "name": "南山食府",
+      "reason": "日式烤肉，人均140，评分4.3"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "烧肉先生",
+      "reason": "日式烤肉，人均145，评分4.4",
+      "ok": false,
+      "notes": [
+       "超预算(145>140)"
+      ]
+     },
+     {
+      "name": "巷子餐厅",
+      "reason": "日式烤肉，人均140，评分4.7",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南山食府",
+      "reason": "日式烤肉，人均140，评分4.3",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q47",
+    "query": "6个人吃江浙菜，人均75，3公里，有包间",
+    "expect": {
+     "people": 6,
+     "budget": 75,
+     "max_km": 3,
+     "need_room": true,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，有包间"
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，有包间"
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(82>75)"
+      ]
+     },
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(76>75)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q48",
+    "query": "3个人吃素食，人均60",
+    "expect": {
+     "people": 3,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食专营，人均68元，安静有包间"
+     },
+     {
+      "name": "粤海食堂",
+      "reason": "纯素食，人均60元，标签匹配度高"
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60元，评分4.5分最高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食专营，人均68元，安静有包间",
+      "ok": false,
+      "notes": [
+       "超预算(68>60)"
+      ]
+     },
+     {
+      "name": "粤海食堂",
+      "reason": "纯素食，人均60元，标签匹配度高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60元，评分4.5分最高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q49",
+    "query": "25人婚宴聚餐，人均250，要包间停车发票",
+    "expect": {
+     "people": 25,
+     "budget": 250,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188，粤菜海鲜，包间停车发票全有"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138，高端粤菜，包间安静可开发票"
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "人均120，潮汕菜，包间停车发票齐全"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188，粤菜海鲜，包间停车发票全有",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138，高端粤菜，包间安静可开发票",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "人均120，潮汕菜，包间停车发票齐全",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q50",
+    "query": "2个人吃东南亚菜，人均80，2公里内",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": 2,
+     "need_room": null,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "西贡妈妈",
+      "reason": "东南亚菜，人均76元，2公里内"
+     },
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108元，2公里内"
+     },
+     {
+      "name": "淳味菜馆",
+      "reason": "东南亚菜，人均125元，2公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贡妈妈",
+      "reason": "东南亚菜，人均76元，2公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(2.0≠0.82km)"
+      ]
+     },
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108元，2公里内",
+      "ok": false,
+      "notes": [
+       "超预算(108>80)",
+       "距离说错(2.0≠0.71km)"
+      ]
+     },
+     {
+      "name": "淳味菜馆",
+      "reason": "东南亚菜，人均125元，2公里内",
+      "ok": false,
+      "notes": [
+       "超预算(125>80)",
+       "超距离(2.7>2km)",
+       "距离说错(2.0≠2.7km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q51",
+    "query": "附近吃个快餐，一个人，25",
+    "expect": {
+     "people": 1,
+     "budget": 25,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，快餐简餐，适合单人快速用餐"
+     },
+     {
+      "name": "喜茶",
+      "reason": "人均28元，甜品咖啡，就近快捷选择"
+     },
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，连锁快餐，出餐快环境好"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，快餐简餐，适合单人快速用餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "喜茶",
+      "reason": "人均28元，甜品咖啡，就近快捷选择",
+      "ok": false,
+      "notes": [
+       "超预算(28>25)"
+      ]
+     },
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，连锁快餐，出餐快环境好",
+      "ok": false,
+      "notes": [
+       "超预算(32>25)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q52",
+    "query": "10个人吃海鲜，人均180，6公里内",
+    "expect": {
+     "people": 10,
+     "budget": 180,
+     "max_km": 6,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188，专营海鲜，有包间"
+     },
+     {
+      "name": "淳味食府",
+      "reason": "人均140，海鲜菜系，评分4.2"
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "人均135，海鲜类，有包间可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "人均188，专营海鲜，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(188>180)"
+      ]
+     },
+     {
+      "name": "淳味食府",
+      "reason": "人均140，海鲜菜系，评分4.2",
+      "ok": false,
+      "notes": [
+       "超距离(7.92>6km)"
+      ]
+     },
+     {
+      "name": "得闲食堂",
+      "reason": "人均135，海鲜类，有包间可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q53",
+    "query": "4个人吃西北菜，人均85",
+    "expect": {
+     "people": 4,
+     "budget": 85,
+     "max_km": null,
+     "need_room": null,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，符合预算"
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间可停车"
+     },
+     {
+      "name": "梁记小馆",
+      "reason": "西北菜，人均80元，有包间评分高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，符合预算",
+      "ok": false,
+      "notes": [
+       "超预算(86>85)"
+      ]
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间可停车",
+      "ok": false,
+      "notes": [
+       "超预算(95>85)"
+      ]
+     },
+     {
+      "name": "梁记小馆",
+      "reason": "西北菜，人均80元，有包间评分高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q54",
+    "query": "6个人喝咖啡，人均40，附近",
+    "expect": {
+     "people": 6,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "咖啡陪你",
+      "reason": "人均48元，专营咖啡，安静可拼桌"
+     },
+     {
+      "name": "喜茶",
+      "reason": "人均28元，知名咖啡茶饮，可拼桌"
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡类，性价比高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "咖啡陪你",
+      "reason": "人均48元，专营咖啡，安静可拼桌",
+      "ok": false,
+      "notes": [
+       "超预算(48>40)"
+      ]
+     },
+     {
+      "name": "喜茶",
+      "reason": "人均28元，知名咖啡茶饮，可拼桌",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡类，性价比高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q55",
+    "query": "3个人吃粤菜，人均65，1公里",
+    "expect": {
+     "people": 3,
+     "budget": 65,
+     "max_km": 1,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜正宗，近1公里"
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，性价比高，近1公里"
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤式风味，近1公里"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "点都德",
+      "reason": "人均72元，粤菜正宗，近1公里",
+      "ok": false,
+      "notes": [
+       "超预算(72>65)"
+      ]
+     },
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，性价比高，近1公里",
+      "ok": true,
+      "notes": [
+       "距离说错(1.0≠0.27km)"
+      ]
+     },
+     {
+      "name": "粤垦路猪肚鸡",
+      "reason": "人均78元，粤式风味，近1公里",
+      "ok": false,
+      "notes": [
+       "超预算(78>65)",
+       "超距离(2.63>1km)",
+       "距离说错(1.0≠2.63km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q56",
+    "query": "8个人吃火锅，人均90，有包间，3公里",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": true,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，有包间，火锅首选"
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，有包间，清爽火锅"
+     },
+     {
+      "name": "客味菜馆",
+      "reason": "人均90元，有包间，性价比高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，有包间，火锅首选",
+      "ok": false,
+      "notes": [
+       "超预算(92>90)"
+      ]
+     },
+     {
+      "name": "椰子鸡·椰妹",
+      "reason": "人均88元，有包间，清爽火锅",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "客味菜馆",
+      "reason": "人均90元，有包间，性价比高",
+      "ok": false,
+      "notes": [
+       "超距离(4.97>3km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q57",
+    "query": "2个人吃川菜，人均70，不要辣",
+    "expect": {
+     "people": 2,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "川菜",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "川菜，人均58元，不辣可选"
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，环境安静不辣"
+     },
+     {
+      "name": "梁记饭店",
+      "reason": "川菜，人均65元，有包间不辣"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "川菜，人均58元，不辣可选",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，环境安静不辣",
+      "ok": false,
+      "notes": [
+       "超预算(80>70)"
+      ]
+     },
+     {
+      "name": "梁记饭店",
+      "reason": "川菜，人均65元，有包间不辣",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q58",
+    "query": "18人聚餐，人均130，包间，5公里",
+    "expect": {
+     "people": 18,
+     "budget": 130,
+     "max_km": 5,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶配，有包间"
+     },
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，服务好，有包间"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，安静私密，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶配，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "海底捞（琶洲店）",
+      "reason": "人均132元，服务好，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(132>130)"
+      ]
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，安静私密，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(138>130)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q59",
+    "query": "5个人吃烧烤，人均100，夜宵，有包间",
+    "expect": {
+     "people": 5,
+     "budget": 100,
+     "max_km": null,
+     "need_room": true,
+     "category": "烧烤",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，有包间，夜宵首选"
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，夜宵热门"
+     },
+     {
+      "name": "得闲食府",
+      "reason": "人均55元，快餐简餐有包间，夜宵方便"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，有包间，夜宵首选",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，专营烧烤，夜宵热门",
+      "ok": false,
+      "notes": [
+       "无包间"
+      ]
+     },
+     {
+      "name": "得闲食府",
+      "reason": "人均55元，快餐简餐有包间，夜宵方便",
+      "ok": false,
+      "notes": [
+       "无包间",
+       "虚构包间"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q60",
+    "query": "4个人吃潮汕牛肉火锅，人均110",
+    "expect": {
+     "people": 4,
+     "budget": 110,
+     "max_km": null,
+     "need_room": null,
+     "category": "潮汕牛肉火锅",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92元，评分4.5"
+     },
+     {
+      "name": "禾田餐厅",
+      "reason": "潮汕牛肉火锅，人均110元，评分4.6"
+     },
+     {
+      "name": "南山饭店",
+      "reason": "潮汕牛肉火锅，人均100元，评分4.4"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "八合里海记",
+      "reason": "潮汕牛肉火锅，人均92元，评分4.5",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "禾田餐厅",
+      "reason": "潮汕牛肉火锅，人均110元，评分4.6",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南山饭店",
+      "reason": "潮汕牛肉火锅，人均100元，评分4.4",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q61",
+    "query": "一个人吃面，40以内，附近",
+    "expect": {
+     "people": 1,
+     "budget": 40,
+     "max_km": null,
+     "need_room": null,
+     "category": "面食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食专营，性价比高"
+     },
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，专注中式面食，就近可选"
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，干净快捷"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，面食专营，性价比高",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "和府捞面",
+      "reason": "人均45元，专注中式面食，就近可选",
+      "ok": false,
+      "notes": [
+       "超预算(45>40)"
+      ]
+     },
+     {
+      "name": "喜家德水饺",
+      "reason": "人均40元，面食为主，干净快捷",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q62",
+    "query": "7个人吃湘菜，人均80，4公里",
+    "expect": {
+     "people": 7,
+     "budget": 80,
+     "max_km": 4,
+     "need_room": null,
+     "category": "湘菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "湘菜，人均68元，符合预算"
+     },
+     {
+      "name": "农耕记",
+      "reason": "湘菜，人均78元，有包间停车"
+     },
+     {
+      "name": "老码头菜馆",
+      "reason": "湘菜，人均70元，评分4.3高"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "费大厨辣椒炒肉",
+      "reason": "湘菜，人均68元，符合预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "农耕记",
+      "reason": "湘菜，人均78元，有包间停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "老码头菜馆",
+      "reason": "湘菜，人均70元，评分4.3高",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q63",
+    "query": "2个人吃海鲜，人均300",
+    "expect": {
+     "people": 2,
+     "budget": 300,
+     "max_km": null,
+     "need_room": null,
+     "category": "海鲜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "黄沙水产",
+      "reason": "海鲜专营，人均188，评分4.5"
+     },
+     {
+      "name": "小院酒家",
+      "reason": "高端海鲜，人均240，评分4.8"
+     },
+     {
+      "name": "鲜煮意食府",
+      "reason": "优质海鲜，人均230，评分4.5"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "黄沙水产",
+      "reason": "海鲜专营，人均188，评分4.5",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "小院酒家",
+      "reason": "高端海鲜，人均240，评分4.8",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "鲜煮意食府",
+      "reason": "优质海鲜，人均230，评分4.5",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q64",
+    "query": "10人聚会，人均60，不要香菜，3公里",
+    "expect": {
+     "people": 10,
+     "budget": 60,
+     "max_km": 3,
+     "need_room": null,
+     "category": null,
+     "avoid": [
+      "香菜"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，符合预算，可拼桌"
+     },
+     {
+      "name": "湘满楼",
+      "reason": "人均62元，接近60元，无香菜风险"
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，川菜少香菜，可拼桌"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "表哥茶餐厅",
+      "reason": "人均55元，符合预算，可拼桌",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "湘满楼",
+      "reason": "人均62元，接近60元，无香菜风险",
+      "ok": false,
+      "notes": [
+       "超预算(62>60)"
+      ]
+     },
+     {
+      "name": "陈麻婆豆腐",
+      "reason": "人均58元，川菜少香菜，可拼桌",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q65",
+    "query": "3个人吃江浙菜，人均70",
+    "expect": {
+     "people": 3,
+     "budget": 70,
+     "max_km": null,
+     "need_room": null,
+     "category": "江浙菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，评分4.1"
+     },
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，评分4.3"
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，评分4.2"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "绿茶餐厅",
+      "reason": "江浙菜，人均69元，评分4.1",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "南京大牌档",
+      "reason": "江浙菜，人均82元，评分4.3",
+      "ok": false,
+      "notes": [
+       "超预算(82>70)"
+      ]
+     },
+     {
+      "name": "胖哥俩肉蟹煲",
+      "reason": "江浙菜，人均76元，评分4.2",
+      "ok": false,
+      "notes": [
+       "超预算(76>70)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q66",
+    "query": "12个人吃粤菜，人均120，有包间，可停车",
+    "expect": {
+     "people": 12,
+     "budget": 120,
+     "max_km": null,
+     "need_room": true,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶流，有包间可停车"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，有包间可停车"
+     },
+     {
+      "name": "惠食佳",
+      "reason": "人均118元，地道粤菜，有包间安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶流，有包间可停车",
+      "ok": false,
+      "notes": [
+       "超预算(128>120)"
+      ]
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，有包间可停车",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "惠食佳",
+      "reason": "人均118元，地道粤菜，有包间安静",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q67",
+    "query": "5个人吃东南亚菜，人均110，有包间",
+    "expect": {
+     "people": 5,
+     "budget": 110,
+     "max_km": null,
+     "need_room": true,
+     "category": "东南亚菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108，有包间"
+     },
+     {
+      "name": "淳味菜馆",
+      "reason": "东南亚菜，人均125，有包间"
+     },
+     {
+      "name": "半山菜馆",
+      "reason": "东南亚菜，人均105，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "泰香米",
+      "reason": "东南亚菜，人均108，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "淳味菜馆",
+      "reason": "东南亚菜，人均125，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(125>110)"
+      ]
+     },
+     {
+      "name": "半山菜馆",
+      "reason": "东南亚菜，人均105，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q68",
+    "query": "2个人吃素食，人均80，安静",
+    "expect": {
+     "people": 2,
+     "budget": 80,
+     "max_km": null,
+     "need_room": null,
+     "category": "素食",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食，人均68，安静有包间"
+     },
+     {
+      "name": "食光食府",
+      "reason": "素食，人均65，有包间，安静"
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60，评分4.5，安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "素菜馆·慈心",
+      "reason": "素食，人均68，安静有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "食光食府",
+      "reason": "素食，人均65，有包间，安静",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "巷子食府",
+      "reason": "素食，人均60，评分4.5，安静",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q69",
+    "query": "9个人吃火锅，人均100，2公里",
+    "expect": {
+     "people": 9,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "火锅",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "大龙燚火锅",
+      "reason": "人均112元，火锅专营，有包间"
+     },
+     {
+      "name": "小龙坎",
+      "reason": "人均105元，老牌火锅，有包间"
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "大龙燚火锅",
+      "reason": "人均112元，火锅专营，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(112>100)"
+      ]
+     },
+     {
+      "name": "小龙坎",
+      "reason": "人均105元，老牌火锅，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(105>100)"
+      ]
+     },
+     {
+      "name": "八合里海记",
+      "reason": "人均92元，潮汕牛肉火锅，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q70",
+    "query": "4个人吃西餐，人均180，有包间",
+    "expect": {
+     "people": 4,
+     "budget": 180,
+     "max_km": null,
+     "need_room": true,
+     "category": "西餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "王品牛排",
+      "reason": "西餐，人均268元，有包间"
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，有包间"
+     },
+     {
+      "name": "阿婆酒家",
+      "reason": "西餐，人均180元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "王品牛排",
+      "reason": "西餐，人均268元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(268>180)"
+      ]
+     },
+     {
+      "name": "蓝蛙",
+      "reason": "西餐，人均158元，有包间",
+      "ok": false,
+      "notes": [
+       "无包间",
+       "虚构包间"
+      ]
+     },
+     {
+      "name": "阿婆酒家",
+      "reason": "西餐，人均180元，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q71",
+    "query": "30人公司聚餐，人均160，包间，可停车发票",
+    "expect": {
+     "people": 30,
+     "budget": 160,
+     "max_km": null,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶流，包间/停车/发票全满足"
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+停车+发票齐全"
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，高端粤菜，包间安静可开发票"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "炳胜品味",
+      "reason": "人均128元，粤菜顶流，包间/停车/发票全满足",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "广州酒家",
+      "reason": "人均110元，老字号粤菜，包间+停车+发票齐全",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "粤菜师傅·家宴",
+      "reason": "人均138元，高端粤菜，包间安静可开发票",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 3
+   },
+   {
+    "id": "Q72",
+    "query": "2个人吃日料，人均60",
+    "expect": {
+     "people": 2,
+     "budget": 60,
+     "max_km": null,
+     "need_room": null,
+     "category": "日料",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "争鲜回转寿司",
+      "reason": "日料，人均78元，性价比高"
+     },
+     {
+      "name": "客味私厨",
+      "reason": "日料，人均80元，评分4.7高"
+     },
+     {
+      "name": "粤海食府",
+      "reason": "日料，人均80元，环境安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "争鲜回转寿司",
+      "reason": "日料，人均78元，性价比高",
+      "ok": false,
+      "notes": [
+       "超预算(78>60)"
+      ]
+     },
+     {
+      "name": "客味私厨",
+      "reason": "日料，人均80元，评分4.7高",
+      "ok": false,
+      "notes": [
+       "超预算(80>60)"
+      ]
+     },
+     {
+      "name": "粤海食府",
+      "reason": "日料，人均80元，环境安静",
+      "ok": false,
+      "notes": [
+       "超预算(80>60)"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q73",
+    "query": "6个人吃快餐简餐，人均30",
+    "expect": {
+     "people": 6,
+     "budget": 30,
+     "max_km": null,
+     "need_room": null,
+     "category": "快餐简餐",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐，适合6人聚餐"
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，简餐面食，可拼桌"
+     },
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，最便宜快餐，适合带娃"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "老乡鸡",
+      "reason": "人均32元，快餐简餐，适合6人聚餐",
+      "ok": false,
+      "notes": [
+       "超预算(32>30)"
+      ]
+     },
+     {
+      "name": "遇见小面",
+      "reason": "人均38元，简餐面食，可拼桌",
+      "ok": false,
+      "notes": [
+       "超预算(38>30)"
+      ]
+     },
+     {
+      "name": "三味菜馆",
+      "reason": "人均25元，最便宜快餐，适合带娃",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q74",
+    "query": "8个人吃烧烤，人均90，3公里，不要辣",
+    "expect": {
+     "people": 8,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "烧烤",
+     "avoid": [
+      "辣"
+     ]
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，烧烤类，不辣，适合8人聚餐"
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤类，不辣，有包间"
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，烧烤类，不辣，可停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "木屋烧烤",
+      "reason": "人均65元，烧烤类，不辣，适合8人聚餐",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "很久以前羊肉串",
+      "reason": "人均82元，烧烤类，不辣，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "得闲小馆",
+      "reason": "人均80元，烧烤类，不辣，可停车",
+      "ok": false,
+      "notes": [
+       "超距离(3.7>3km)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q75",
+    "query": "3个人吃西北菜，人均75，有包间",
+    "expect": {
+     "people": 3,
+     "budget": 75,
+     "max_km": null,
+     "need_room": true,
+     "category": "西北菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，有包间"
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间"
+     },
+     {
+      "name": "李记餐厅",
+      "reason": "西北菜，人均70元，评分4.5"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "西贝莜面村",
+      "reason": "西北菜，人均86元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(86>75)"
+      ]
+     },
+     {
+      "name": "北疆饭店",
+      "reason": "西北菜，人均95元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(95>75)"
+      ]
+     },
+     {
+      "name": "李记餐厅",
+      "reason": "西北菜，人均70元，评分4.5",
+      "ok": false,
+      "notes": [
+       "无包间"
+      ]
+     }
+    ],
+    "n_ok": 0
+   },
+   {
+    "id": "Q76",
+    "query": "5个人吃潮汕菜，人均100，2公里",
+    "expect": {
+     "people": 5,
+     "budget": 100,
+     "max_km": 2,
+     "need_room": null,
+     "category": "潮汕菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "一味鲜",
+      "reason": "潮汕菜，人均88元，2公里内"
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "潮汕菜，人均120元，2公里内"
+     },
+     {
+      "name": "南山饭店",
+      "reason": "潮汕牛肉火锅，人均100元，2公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "一味鲜",
+      "reason": "潮汕菜，人均88元，2公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(2.0≠0.84km)"
+      ]
+     },
+     {
+      "name": "阿婆小馆",
+      "reason": "潮汕菜，人均120元，2公里内",
+      "ok": false,
+      "notes": [
+       "超预算(120>100)",
+       "距离说错(2.0≠0.5km)"
+      ]
+     },
+     {
+      "name": "南山饭店",
+      "reason": "潮汕牛肉火锅，人均100元，2公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(2.0≠0.62km)"
+      ]
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q77",
+    "query": "15人聚餐，人均85，有包间，4公里，可停车",
+    "expect": {
+     "people": 15,
+     "budget": 85,
+     "max_km": 4,
+     "need_room": true,
+     "category": null,
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间可停车，距4公里内"
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，有包间可停车，距4公里内"
+     },
+     {
+      "name": "农耕记",
+      "reason": "人均78元，有包间可停车，距4公里内"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "陶陶居",
+      "reason": "人均96元，有包间可停车，距4公里内",
+      "ok": false,
+      "notes": [
+       "超预算(96>85)",
+       "距离说错(4.0≠0.74km)"
+      ]
+     },
+     {
+      "name": "大鸽饭",
+      "reason": "人均88元，有包间可停车，距4公里内",
+      "ok": false,
+      "notes": [
+       "超预算(88>85)",
+       "距离说错(4.0≠1.42km)"
+      ]
+     },
+     {
+      "name": "农耕记",
+      "reason": "人均78元，有包间可停车，距4公里内",
+      "ok": true,
+      "notes": [
+       "距离说错(4.0≠0.76km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q78",
+    "query": "2个人吃甜品，人均35，1公里",
+    "expect": {
+     "people": 2,
+     "budget": 35,
+     "max_km": 1,
+     "need_room": null,
+     "category": "甜品咖啡",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，甜品咖啡，符合预算"
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡，精准匹配"
+     },
+     {
+      "name": "得闲菜馆",
+      "reason": "人均35元，甜品咖啡，安静可停车"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "喜茶",
+      "reason": "人均28元，甜品咖啡，符合预算",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "家味食府",
+      "reason": "人均35元，甜品咖啡，精准匹配",
+      "ok": false,
+      "notes": [
+       "超距离(5.02>1km)"
+      ]
+     },
+     {
+      "name": "得闲菜馆",
+      "reason": "人均35元，甜品咖啡，安静可停车",
+      "ok": false,
+      "notes": [
+       "超距离(6.53>1km)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   },
+   {
+    "id": "Q79",
+    "query": "11个人吃川菜，人均95，有包间",
+    "expect": {
+     "people": 11,
+     "budget": 95,
+     "max_km": null,
+     "need_room": true,
+     "category": "川菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "蜀九香",
+      "reason": "川菜，人均98元，有包间"
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，有包间"
+     },
+     {
+      "name": "码头饭店",
+      "reason": "川菜，人均80元，有包间"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "蜀九香",
+      "reason": "川菜，人均98元，有包间",
+      "ok": false,
+      "notes": [
+       "超预算(98>95)"
+      ]
+     },
+     {
+      "name": "客味小馆",
+      "reason": "川菜，人均80元，有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "码头饭店",
+      "reason": "川菜，人均80元，有包间",
+      "ok": true,
+      "notes": []
+     }
+    ],
+    "n_ok": 2
+   },
+   {
+    "id": "Q80",
+    "query": "4个人吃粤菜，人均90，3公里，安静",
+    "expect": {
+     "people": 4,
+     "budget": 90,
+     "max_km": 3,
+     "need_room": null,
+     "category": "粤菜",
+     "avoid": []
+    },
+    "slots": null,
+    "recs": [
+     {
+      "name": "大鸽饭",
+      "reason": "粤菜，人均88元，安静有包间"
+     },
+     {
+      "name": "陶陶居",
+      "reason": "粤菜，人均96元，有包间近3公里"
+     },
+     {
+      "name": "太艮堡毋米粥",
+      "reason": "粤菜，人均95元，有包间较安静"
+     }
+    ],
+    "error": null,
+    "rec_detail": [
+     {
+      "name": "大鸽饭",
+      "reason": "粤菜，人均88元，安静有包间",
+      "ok": true,
+      "notes": []
+     },
+     {
+      "name": "陶陶居",
+      "reason": "粤菜，人均96元，有包间近3公里",
+      "ok": false,
+      "notes": [
+       "超预算(96>90)",
+       "距离说错(3.0≠0.74km)"
+      ]
+     },
+     {
+      "name": "太艮堡毋米粥",
+      "reason": "粤菜，人均95元，有包间较安静",
+      "ok": false,
+      "notes": [
+       "超预算(95>90)"
+      ]
+     }
+    ],
+    "n_ok": 1
+   }
+  ]
+ }
+}

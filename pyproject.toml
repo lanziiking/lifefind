@@ -1,0 +1,19 @@
+[project]
+name = "lifefind-agent"
+version = "0.1.0"
+description = "自然语言本地生活找店助手：把口语需求拆成结构化约束，硬约束用代码算、软约束交给模型"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "pywebview>=6.2.1",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.22.3",
+]

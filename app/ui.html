@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>找店助手</title>
+<style>
+  :root{
+    --ink:#12161c; --ink2:#4b5563; --ink3:#8b95a5;
+    --line:#e5e8ee; --bg:#f7f8fa; --panel:#ffffff;
+    --brand:#ffd000; --brand-ink:#6b5400;
+    --good:#1a7f4b; --good-bg:#eef7f1;
+    --bad:#c0392b; --bad-bg:#fdf4f3;
+    --blue:#2b5f9e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);font-size:14px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- 顶栏 ---------- */
+  .top{
+    height:58px;background:var(--panel);border-bottom:1px solid var(--line);
+    display:flex;align-items:center;padding:0 22px;gap:14px;
+  }
+  .logo{width:26px;height:26px;border-radius:7px;background:var(--brand);
+    display:flex;align-items:center;justify-content:center;font-size:14px}
+  .brand{font-size:15px;font-weight:800;letter-spacing:-.01em}
+  .brand span{font-weight:400;color:var(--ink3);font-size:12px;margin-left:9px}
+  .top-right{margin-left:auto;display:flex;align-items:center;gap:9px}
+  .switch-lab{font-size:12px;color:var(--ink3)}
+  .switch{position:relative;width:38px;height:21px;border-radius:11px;background:#d8dde5;
+    cursor:pointer;transition:.22s;flex:0 0 auto}
+  .switch::after{content:"";position:absolute;top:2.5px;left:2.5px;width:16px;height:16px;
+    border-radius:50%;background:#fff;transition:.22s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .switch.on{background:var(--ink)}
+  .switch.on::after{transform:translateX(17px)}
+
+  /* ---------- 主体 ---------- */
+  .main{display:flex;height:calc(100% - 58px)}
+
+  /* 左栏 */
+  .side{width:376px;flex:0 0 376px;background:var(--panel);border-right:1px solid var(--line);
+    padding:22px 22px 18px;display:flex;flex-direction:column;overflow-y:auto}
+  .label{font-size:12px;font-weight:700;color:var(--ink3);letter-spacing:.06em;margin-bottom:9px}
+  textarea{
+    width:100%;height:96px;resize:none;border:1.5px solid var(--line);border-radius:9px;
+    padding:12px 13px;font-size:14px;line-height:1.65;font-family:inherit;color:var(--ink);
+    background:#fcfcfd;outline:none;transition:.18s;
+  }
+  textarea:focus{border-color:var(--brand);background:#fff;box-shadow:0 0 0 3px rgba(255,208,0,.16)}
+  textarea::placeholder{color:#aeb6c2}
+
+  .btn{
+    width:100%;height:42px;margin-top:12px;border:none;border-radius:9px;
+    background:var(--brand);color:#3d3000;font-size:14.5px;font-weight:800;
+    cursor:pointer;transition:.16s;letter-spacing:.02em;
+  }
+  .btn:hover{filter:brightness(.96)}
+  .btn:active{transform:translateY(1px)}
+  .btn:disabled{background:#e9ecf1;color:#a7aeb9;cursor:default;transform:none}
+
+  .examples{margin-top:18px}
+  .chip{
+    display:inline-block;font-size:12.5px;color:var(--ink2);background:#f2f4f7;
+    border:1px solid transparent;border-radius:6px;padding:6px 10px;margin:0 6px 7px 0;
+    cursor:pointer;transition:.16s;
+  }
+  .chip:hover{background:#fff;border-color:#dfe3ea;color:var(--ink)}
+
+  .divider{height:1px;background:var(--line);margin:20px 0 16px}
+
+  /* 半径滑杆 */
+  .rangerow{display:flex;align-items:center;gap:11px}
+  .rangerow input[type=range]{
+    -webkit-appearance:none;appearance:none;flex:1;height:4px;border-radius:2px;
+    background:#e5e8ee;outline:none;
+  }
+  .rangerow input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:15px;height:15px;border-radius:50%;
+    background:var(--ink);border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer;
+  }
+  .radval{font-size:12.5px;font-weight:800;color:var(--ink);min-width:46px;text-align:right;
+    font-variant-numeric:tabular-nums}
+  .rangehint{font-size:11.5px;color:var(--ink3);margin-top:7px}
+
+  /* 解析结果 */
+  .slots{display:flex;flex-wrap:wrap;gap:7px;min-height:30px}
+  .slot{font-size:12.5px;padding:5px 10px;border-radius:6px;background:#f2f4f7;color:#9aa3b0;
+    border:1px solid transparent}
+  .slot.on{background:#fffbe8;border-color:#f0dc8a;color:var(--brand-ink);font-weight:700}
+  .slot.empty{background:transparent;border:1px dashed #e2e6ec;color:#b6bec9}
+
+  /* 右栏：地图 + 结果 */
+  .right{flex:1;display:flex;flex-direction:column;min-width:0}
+  .mapwrap{flex:0 0 336px;position:relative;background:#e9edf3;border-bottom:1px solid var(--line);
+    overflow:hidden}
+  #map{position:absolute;inset:0}
+  .mapmask{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;background:#eef1f5;color:var(--ink3);
+    font-size:12.5px;line-height:1.9;padding:0 40px;z-index:5}
+  .mapmask.hide{display:none}
+  .mapmask b{color:var(--ink2);display:block;margin-bottom:4px;font-size:13px}
+  .mapinfo{position:absolute;left:14px;bottom:14px;z-index:4;background:rgba(255,255,255,.95);
+    border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--ink2);
+    box-shadow:0 2px 10px rgba(20,26,36,.08)}
+  .mapinfo b{color:var(--ink);font-weight:800}
+  .mapinfo .dot{display:inline-block;width:7px;height:7px;border-radius:50%;
+    background:var(--good);margin-right:5px;vertical-align:1px}
+  .mapinfo .dot.rec{background:var(--brand);box-shadow:0 0 0 2px #fff}
+
+  .result{flex:1;overflow-y:auto;padding:20px 26px 40px}
+
+  .empty{height:100%;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;color:var(--ink3);padding-bottom:30px}
+  .empty .ico{width:56px;height:56px;border-radius:16px;background:#fff;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+  .empty h3{font-size:16px;color:var(--ink2);font-weight:700;margin-bottom:7px}
+  .empty p{font-size:13px;max-width:340px;line-height:1.8}
+
+  .bar{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .bar h2{font-size:15px;font-weight:800}
+  .bar .cnt{font-size:12px;color:var(--ink3)}
+  .bar .tag{font-size:11px;font-weight:800;padding:2px 8px;border-radius:4px;
+    background:#eef1f5;color:#6b7684;letter-spacing:.04em}
+  .bar .tag.v2{background:#eef7f1;color:var(--good)}
+  .bar .tag.v1{background:#fdf4f3;color:var(--bad)}
+  .bar .tag.src{background:#eaf1fa;color:var(--blue)}
+
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:15px 17px;margin-bottom:10px;position:relative;overflow:hidden;
+    transition:.16s;cursor:default;
+  }
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--good)}
+  .card.bad::before{background:var(--bad)}
+  .card:hover{box-shadow:0 2px 10px rgba(20,26,36,.06)}
+  /* ---- 带实拍图的卡片：左边一张图，右边文字 ---- */
+  .card.photo{display:flex;gap:14px;align-items:flex-start;padding:13px 15px}
+  .card.photo .cmain{flex:1;min-width:0}
+  .thumb{width:110px;height:110px;flex:0 0 auto;border-radius:9px;overflow:hidden;
+    position:relative;background:#eef0f3;cursor:zoom-in}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.25s}
+  .thumb:hover img{transform:scale(1.07)}
+  .thumb .pcount{position:absolute;right:5px;bottom:5px;background:rgba(0,0,0,.58);
+    color:#fff;font-size:10px;padding:1px 5px;border-radius:4px}
+  .thumb .ph-fallback{display:flex;align-items:center;justify-content:center;
+    width:100%;height:100%;color:#a8b0ba;font-size:11.5px;text-align:center;padding:0 6px}
+  .thumb.noimg::after{content:"暂无图片";position:absolute;inset:0;display:flex;
+    align-items:center;justify-content:center;color:#a8b0ba;font-size:11.5px}
+  /* ---- 点开看大图 ---- */
+  .zoom{position:fixed;inset:0;background:rgba(12,16,22,.87);display:none;
+    align-items:center;justify-content:center;z-index:9999;cursor:zoom-out;padding:4vh 4vw}
+  .zoom.on{display:flex}
+  .zoom img{max-width:92vw;max-height:86vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.55)}
+  .zoom .cap{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#dfe4ea;font-size:13px}
+  .card.active{border-color:#f0dc8a;box-shadow:0 0 0 3px rgba(255,208,0,.18)}
+  .card-head{display:flex;align-items:center;gap:9px;margin-bottom:7px;flex-wrap:wrap}
+  .name{font-size:15.5px;font-weight:800;letter-spacing:-.01em}
+  .badge{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:.04em}
+  .badge.ok{background:var(--good-bg);color:var(--good)}
+  .badge.no{background:var(--bad-bg);color:var(--bad)}
+  .meta{font-size:12.5px;color:var(--ink3);font-variant-numeric:tabular-nums}
+  .meta b{color:var(--ink2);font-weight:700}
+  .est{font-size:10px;font-weight:800;color:#8a6d0b;background:#fff6d6;border-radius:3px;
+    padding:1px 4px;margin-left:3px;vertical-align:1px}
+  .reason{font-size:13px;color:var(--ink2);margin-top:6px;line-height:1.6}
+  .facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+  .fact{font-size:12px;color:var(--ink2);background:#f2f4f7;border-radius:6px;padding:2.5px 8px}
+  .fact em{font-style:normal;color:#0f7b3f;font-weight:600;margin-left:3px}
+  .fact.unk{background:#fdf6e3;color:#8a6d0b}
+  .notices{margin-top:14px;padding:10px 13px;background:#fdf6e3;border:1px solid #f0e0b0;border-radius:9px}
+  .notices .nt{font-size:12.5px;color:#6b5306;line-height:1.75}
+  .notices .nt b{color:#8a6d0b}
+  .notices .nh{font-size:11.5px;color:#9a8a5a;margin-bottom:4px;letter-spacing:.3px}
+  .tags{margin-top:8px;display:flex;gap:5px;flex-wrap:wrap}
+  .tags i{font-style:normal;font-size:11px;color:#7c8698;background:#f2f4f7;
+    padding:2px 7px;border-radius:3px}
+
+  /* 范围内其他店（折叠） */
+  details.more{margin-top:2px}
+  details.more summary{
+    cursor:pointer;font-size:12.5px;color:var(--ink2);background:#fff;border:1px solid var(--line);
+    border-radius:8px;padding:9px 13px;list-style:none;
+  }
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary:hover{background:#fcfcfd}
+  .mrow{display:flex;align-items:center;gap:8px;padding:8px 13px;font-size:12.5px;
+    border-bottom:1px solid #f2f4f7;cursor:pointer}
+  .mrow:hover{background:#fbfcfd}
+  .mrow .n{font-weight:700;color:var(--ink)}
+  .mrow .m{color:var(--ink3);margin-left:auto;font-variant-numeric:tabular-nums}
+
+  .warn{
+    margin-top:12px;font-size:12.5px;color:var(--bad);background:var(--bad-bg);
+    border:1px solid #f4dcd8;border-radius:7px;padding:9px 12px;
+  }
+
+  /* 骨架 */
+  .sk{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:17px;margin-bottom:10px}
+  .sk div{height:11px;border-radius:5px;background:linear-gradient(90deg,#eef1f5 25%,#f7f9fb 50%,#eef1f5 75%);
+    background-size:200% 100%;animation:sh 1.2s infinite;margin-bottom:9px}
+  .sk div:nth-child(1){width:36%}
+  .sk div:nth-child(2){width:78%}
+  .sk div:nth-child(3){width:52%;margin-bottom:0}
+  @keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+  .err{background:var(--bad-bg);border:1px solid #f4dcd8;color:var(--bad);
+    border-radius:8px;padding:14px 16px;font-size:13px;line-height:1.7}
+  .err b{display:block;margin-bottom:5px}
+
+  .hint{margin-top:14px;font-size:11.5px;color:var(--ink3);line-height:1.75}
+  .kbd{display:inline-block;padding:0 5px;border:1px solid var(--line);border-radius:3px;
+    background:#fff;font-size:10.5px;color:var(--ink2);font-family:inherit}
+
+  ::-webkit-scrollbar{width:9px;height:9px}
+  ::-webkit-scrollbar-thumb{background:#d3d9e2;border-radius:5px;border:2px solid var(--bg)}
+  ::-webkit-scrollbar-thumb:hover{background:#bcc4d0}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  /* 地图标记 */
+  .mk{width:13px;height:13px;border-radius:50%;background:#8b95a5;border:2.5px solid #fff;
+    box-shadow:0 1px 5px rgba(0,0,0,.3);cursor:pointer;transition:.15s}
+  .mk:hover{transform:scale(1.25)}
+  .mk.rec{width:19px;height:19px;background:var(--brand);border-color:#fff;
+    box-shadow:0 0 0 3px rgba(255,208,0,.35),0 2px 8px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="logo">◎</div>
+  <div class="brand">找店助手<span>一句话说清你要吃什么</span></div>
+  <div class="top-right">
+    <span class="switch-lab" id="swlab">对照：不用工具会怎样</span>
+    <div class="switch" id="sw"></div>
+  </div>
+</div>
+
+<div class="main">
+  <!-- 左栏 -->
+  <div class="side">
+    <div class="label">你的需求</div>
+    <textarea id="q" placeholder="比如：我们 6 个人想吃湘菜，人均别超过 90，要有包间，3 公里内"></textarea>
+    <button class="btn" id="go">帮我找 →</button>
+
+    <div class="examples">
+      <div class="label" style="margin-top:4px">试试这些</div>
+      <span class="chip">12个人聚餐，人均120，要包间</span>
+      <span class="chip">两个人吃日料，人均200，2公里内</span>
+      <span class="chip">8个人吃火锅，人均100，有包间，不要辣</span>
+      <span class="chip">一个人吃饭，30块以内</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="label">搜索范围</div>
+    <div class="rangerow">
+      <input type="range" id="rad" min="0.5" max="5" step="0.5" value="3">
+      <span class="radval" id="radv">3.0 km</span>
+    </div>
+    <div class="rangehint">地图上的圆就是这个范围，松手立刻重新检索。<br>你说的"3公里内"会自动同步到这个滑杆。</div>
+
+    <div class="divider"></div>
+
+    <div class="label">系统理解到的条件</div>
+    <div class="slots" id="slots">
+      <span class="slot empty">还没开始</span>
+    </div>
+
+    <div class="hint">
+      <span class="kbd">Ctrl</span> + <span class="kbd">Enter</span> 快速搜索<br>
+      <span id="srchint">数据：高德实时商户，从珠江新城地铁站出发算距离</span>
+    </div>
+  </div>
+
+  <!-- 右栏 -->
+  <div class="right">
+    <div class="mapwrap">
+      <div id="map"></div>
+      <div class="mapmask" id="mapmask">
+        <b>地图还没加载</b>
+        正在准备…
+      </div>
+      <div class="mapinfo" id="mapinfo" style="display:none">
+        <span class="dot rec"></span><b>推荐</b>　
+        <span class="dot"></span>范围内其他店
+      </div>
+    </div>
+
+    <div class="result" id="result">
+      <div class="empty">
+        <div class="ico">◎</div>
+        <h3>用一句大白话，说出你的全部条件</h3>
+        <p>人数、预算、距离、要不要包间、想吃什么、有什么忌口——<br>一次说完，不用一层层点筛选。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const qEl = $('#q'), btn = $('#go'), resEl = $('#result'), slotsEl = $('#slots'), sw = $('#sw');
+const radEl = $('#rad'), radvEl = $('#radv'), mapEl = $('#map');
+const mapMask = $('#mapmask'), mapInfo = $('#mapinfo');
+
+let compareOn = false;
+let lastQuery = '';
+let v2Data = null, v1Data = null;
+let cfg = null;                 // 后端下发的配置（含高德 key）
+let amapReady = false;
+
+// 地图对象
+let map = null, circle = null, markers = [];
+
+// ---------- 工具 ----------
+const esc = s => String(s == null ? '' : s)
+  .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function fmtKm(v){ return (v == null) ? null : Number(v).toFixed(1); }
+
+// 营业时间原文很长（"周一至周五 10:30-15:00,16:30-22:00；周六至周日 …"），
+// 卡片上只显示前两个时段，完整信息悬停可看
+function shortOpen(s){
+  if(!s) return '';
+  const m = String(s).match(/\d{1,2}:\d{2}\s*[-~至]\s*\d{1,2}:\d{2}/g);
+  if(!m) return String(s).slice(0, 20);
+  const uniq = [...new Set(m.map(x => x.replace(/\s/g, '')).slice(0, 2))];
+  return uniq.join(' / ');
+}
+
+function renderSlots(slots, relaxed){
+  if(!slots){ slotsEl.innerHTML = '<span class="slot empty">没解析出来</span>'; return; }
+  const items = [];
+  if(slots.people) items.push(`<span class="slot on">${slots.people} 人</span>`);
+  if(slots.budget) items.push(`<span class="slot on">人均 ≤ ¥${slots.budget}</span>`);
+  if(slots.max_km) items.push(`<span class="slot on">${slots.max_km} 公里内</span>`);
+  if(slots.need_room) items.push(`<span class="slot on">要有包间</span>`);
+  if(slots.category) items.push(`<span class="slot on">${esc(slots.category)}</span>`);
+  if(slots.at_time) items.push(`<span class="slot on">${esc(slots.at_time)} 用餐</span>`);
+  if(slots.avoid && slots.avoid.length) items.push(`<span class="slot on">忌 ${slots.avoid.map(esc).join('、')}</span>`);
+
+  const missing = [];
+  if(!slots.people) missing.push('人数');
+  if(!slots.budget) missing.push('预算');
+  if(!slots.max_km) missing.push('距离');
+  if(!slots.need_room) missing.push('包间');
+  if(!slots.category) missing.push('菜系');
+
+  let html = items.join('');
+  if(missing.length) html += `<span class="slot empty">未提：${missing.join(' / ')}</span>`;
+  if(relaxed) html += `<span class="slot empty">没有完全符合的，已放宽</span>`;
+  slotsEl.innerHTML = html || '<span class="slot empty">没解析出条件</span>';
+}
+
+function card(r, bad, idx){
+  const tags = (r.tags || []).map(t => `<i>${esc(t)}</i>`).join('');
+  const badge = bad
+    ? `<span class="badge no">${esc(r.notes && r.notes.length ? r.notes.join('、') : '不合规')}</span>`
+    : `<span class="badge ok">符合条件</span>`;
+  const est = r.price_estimated ? '<span class="est">估算</span>' : '';
+  const price = r.avg_price != null
+    ? `人均${r.price_estimated ? '约 ' : ' '}<b>¥${r.avg_price}</b>${est}` : '';
+  const dist  = r.distance_km != null ? `距您 <b>${fmtKm(r.distance_km)} km</b>` : '';
+
+  // 「能核实的」和「核不了的」分开写。
+  // 这是整个产品最该被看见的地方：数据里没有的字段，宁可写"未提供"，也不许装作知道。
+  const facts = [];
+  if (r.category_unverified) {
+    facts.push(`<span class="fact unk">菜系未确认</span>`);
+  }
+  if (r.open_time) {
+    facts.push(`<span class="fact" title="${esc(r.open_time)}">营业 ${esc(shortOpen(r.open_time))}` +
+               `${r.open_status === 'open' ? '<em>此时营业</em>' : ''}</span>`);
+  } else {
+    facts.push(`<span class="fact unk">营业时间未提供</span>`);
+  }
+  if (r.has_room === true) {
+    facts.push(`<span class="fact">有包间</span>`);
+  } else if (r.has_room === false) {
+    facts.push(`<span class="fact">无包间</span>`);
+  } else if (r.room_hint) {
+    facts.push(`<span class="fact unk">可能有包间 · 请电话确认</span>`);
+  } else {
+    facts.push(`<span class="fact unk">包间未知 · 请电话确认</span>`);
+  }
+
+  const inner = `<div class="card-head">
+      <span class="name">${esc(r.name)}</span>
+      ${badge}
+      <span class="meta">${price}${price && dist ? ' · ' : ''}${dist}</span>
+    </div>
+    <div class="reason">${esc(r.reason)}</div>
+    <div class="facts">${facts.join('')}</div>
+    ${tags ? `<div class="tags">${tags}</div>` : ''}`;
+
+  const photos = r.photos || [];
+  const cls = `card${photos.length ? ' photo' : ''}${bad ? ' bad' : ''}`;
+
+  // 没有实拍图就不占位置（模拟数据没有图，高德部分店也没有）
+  if (!photos.length) {
+    return `<div class="${cls}" data-name="${esc(r.name)}" id="rc-${idx}">${inner}</div>`;
+  }
+
+  const pcount = photos.length > 1 ? `<span class="pcount">${photos.length} 图</span>` : '';
+  return `<div class="${cls}" data-name="${esc(r.name)}" id="rc-${idx}">
+    <div class="thumb" title="点击看大图">
+      <img src="${esc(photos[0])}" data-name="${esc(r.name)}" loading="lazy"
+           alt="${esc(r.name)}" onerror="this.style.display='none';this.parentNode.classList.add('noimg')">
+      ${pcount}
+    </div>
+    <div class="cmain">${inner}</div>
+  </div>`;
+}
+
+function skeleton(n){
+  return Array.from({length:n||3}).map(()=>'<div class="sk"><div></div><div></div><div></div></div>').join('');
+}
+
+// ---------- 地图 ----------
+function showMapMask(title, sub){
+  mapMask.classList.remove('hide');
+  mapMask.innerHTML = `<b>${esc(title)}</b>${esc(sub || '')}`;
+}
+function hideMapMask(){ mapMask.classList.add('hide'); }
+
+async function initMap(){
+  try{ cfg = await window.pywebview.api.config(); }catch(e){ cfg = null; }
+
+  // 没有 JS API Key：地图不加载，但列表照常出结果
+  if(!cfg || !cfg.amap_js_key){
+    showMapMask('地图未加载', '没有配置 AMAP_JS_KEY（高德 Web端 JS API），在 .env 里补上后重启即可。');
+    return;
+  }
+
+  if(cfg.amap_security_code){
+    window._AMapSecurityConfig = { securityJsCode: cfg.amap_security_code };
+  }
+
+  const s = document.createElement('script');
+  s.src = `https://webapi.amap.com/maps?v=2.0&key=${encodeURIComponent(cfg.amap_js_key)}`;
+  s.onload = () => {
+    amapReady = true;
+    hideMapMask();
+    buildMap();
+    if(v2Data && v2Data.map) syncMap(v2Data.map, true);
+  };
+  s.onerror = () => showMapMask('地图脚本加载失败', '检查网络，或确认 JS API Key 类型是否正确。');
+  document.head.appendChild(s);
+}
+
+function buildMap(){
+  if(map) return;
+  const c = (cfg && cfg.center) || { lat: 23.1197, lng: 113.3218 };
+  map = new AMap.Map('map', {
+    zoom: 14,
+    center: [c.lng, c.lat],
+    viewMode: '2D',
+    mapStyle: 'amap://styles/whitesmoke'
+  });
+}
+
+function syncMap(m, fit){
+  if(!amapReady || !map || !m) return;
+  hideMapMask();
+  mapInfo.style.display = 'block';
+
+  map.clearMap();
+  markers = [];
+
+  const center = [m.center.lng, m.center.lat];
+
+  circle = new AMap.Circle({
+    center,
+    radius: m.radius_km * 1000,
+    strokeColor: '#2b5f9e',
+    strokeWeight: 1.6,
+    strokeOpacity: .85,
+    fillColor: '#2b5f9e',
+    fillOpacity: .07,
+    strokeStyle: 'dashed'
+  });
+  map.add(circle);
+
+  // 中心点
+  map.add(new AMap.Marker({
+    position: center,
+    content: '<div style="width:11px;height:11px;border-radius:50%;background:#2b5f9e;' +
+             'border:2.5px solid #fff;box-shadow:0 0 0 3px rgba(43,95,158,.18)"></div>',
+    offset: new AMap.Pixel(-8, -8),
+    title: m.center.name || '你的位置'
+  }));
+
+  (m.pois || []).forEach(p => {
+    const mk = new AMap.Marker({
+      position: [p.lng, p.lat],
+      content: `<div class="mk ${p.recommended ? 'rec' : ''}"></div>`,
+      offset: new AMap.Pixel(p.recommended ? -11 : -8, p.recommended ? -11 : -8),
+      title: p.name,
+      zIndex: p.recommended ? 120 : 100
+    });
+    mk.on('click', () => focusCard(p.name));
+    map.add(mk);
+    markers.push(mk);
+  });
+
+  if(fit) map.setFitView([circle], false, [40, 40, 40, 40]);
+  else map.setZoomAndCenter(Math.max(12, 16 - Math.log2(Math.max(m.radius_km, .5))), center);
+}
+
+function focusCard(name){
+  const el = [...document.querySelectorAll('.card')].find(c => c.dataset.name === name);
+  if(!el){
+    const row = [...document.querySelectorAll('.mrow')].find(r => r.dataset.name === name);
+    if(row){ row.scrollIntoView({behavior:'smooth', block:'center'}); row.style.background = '#fffbe8';
+      setTimeout(()=>row.style.background='', 1200); }
+    return;
+  }
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  el.scrollIntoView({behavior:'smooth', block:'center'});
+  setTimeout(()=>el.classList.remove('active'), 1800);
+}
+
+// ---------- 主流程 ----------
+async function find(){
+  const q = qEl.value.trim();
+  if(!q) { qEl.focus(); return; }
+
+  lastQuery = q; v1Data = null; v2Data = null;
+  btn.disabled = true; btn.textContent = '正在理解你的需求…';
+  slotsEl.innerHTML = '<span class="slot empty">解析中…</span>';
+  resEl.innerHTML = skeleton(3);
+
+  try {
+    const r = await window.pywebview.api.recommend(q, parseFloat(radEl.value));
+    v2Data = r;
+    renderSlots(r.slots, r.relaxed);
+    btn.disabled = false; btn.textContent = '帮我找 →';
+
+    // 让滑杆跟上用户说的距离
+    if(r.map && r.map.radius_km && !r.slots.max_km){
+      radEl.value = Math.min(5, Math.max(.5, r.map.radius_km));
+      updateRadLabel();
+    }
+    syncMap(r.map, true);
+
+    if(compareOn) await loadCompare();
+    render();
+  } catch(e){
+    btn.disabled = false; btn.textContent = '帮我找 →';
+    resEl.innerHTML = `<div class="err"><b>出错了</b>${esc(e.message || e)}<br>请检查网络，或确认 .env 里的密钥是否有效。</div>`;
+  }
+}
+
+async function loadCompare(){
+  if(v1Data || !lastQuery) return;
+  try{
+    v1Data = await window.pywebview.api.baseline(lastQuery);
+  }catch(e){ v1Data = {recs:[], error:String(e.message||e)}; }
+}
+
+function render(){
+  if(!v2Data) return;
+  const v2 = v2Data.recs || [];
+  const isAmap = v2Data.source === 'amap';
+  const mp = v2Data.map || {};
+  const inRing = (mp.pois || []).length;
+
+  let html = `<div class="bar">
+      <h2>推荐方案</h2>
+      <span class="tag v2">工具版</span>
+      <span class="tag src">${isAmap ? '高德实时' : '本地模拟'}</span>
+      <span class="cnt">${mp.radius_km || ''} 公里内共 ${inRing} 家 · 通过校验 ${v2Data.pool || 0} 家</span>
+    </div>`;
+
+  if(!v2.length){
+    html += `<div class="err"><b>范围内没有完全符合条件的店</b>把圆拉大一点，或者放宽预算，比给你一家错的更靠谱。</div>`;
+  } else {
+    html += v2.map((r, i) => card(r, false, i)).join('');
+    if (v2Data.notices && v2Data.notices.length) {
+      html += `<div class="notices"><div class="nh">这几件事我核不了，说清楚比装作知道更重要</div>` +
+              v2Data.notices.map(n => `<div class="nt">· ${esc(n)}</div>`).join('') + `</div>`;
+    }
+    const tcheck = (v2Data.slots && v2Data.slots.at_time) ? '、营业时间' : '';
+    html += `<div class="hint" style="margin-top:12px">以上 ${v2.length} 家已通过预算、距离${tcheck}校验，数字来自真实数据。` +
+            `${isAmap ? '人均带「估算」标记的，是高德没有公开消费数据、按菜系估算的。' : ''}</div>`;
+  }
+
+  // 范围内其他店（不在推荐里的）
+  const recNames = new Set(v2.map(r => r.name));
+  const others = (mp.pois || []).filter(p => !recNames.has(p.name));
+  if(others.length){
+    html += `<details class="more"><summary>范围内还有 ${others.length} 家，点开看全部</summary>`;
+    html += others.map(p => `<div class="mrow" data-name="${esc(p.name)}">
+        <span class="n">${esc(p.name)}</span>
+        <span class="m">人均约 ¥${p.avg_price} · ${fmtKm(p.distance_km)} km</span>
+      </div>`).join('');
+    html += `</details>`;
+    setTimeout(() => {
+      document.querySelectorAll('.mrow').forEach(row => {
+        row.onclick = () => { focusOnMap(row.dataset.name); };
+      });
+    }, 0);
+  }
+
+  if(compareOn && v1Data){
+    const v1 = v1Data.recs || [];
+    html += `<div class="bar" style="margin-top:30px">
+        <h2>如果直接问大模型</h2>
+        <span class="tag v1">不使用工具</span>
+        <span class="cnt">它看不到坐标，也做不了多条件计算</span>
+      </div>`;
+    if(!v1.length){
+      html += `<div class="err">没有返回结果。</div>`;
+    } else {
+      html += v1.map((r, i) => card(r, (r.notes && r.notes.length) > 0, 'v1-'+i)).join('');
+      const badN = v1.filter(r => r.notes && r.notes.length).length;
+      if(badN) html += `<div class="warn">${badN} 家存在问题：可能超预算、超距离，或者它说"有包间"但实际没有。</div>`;
+    }
+  }
+
+  resEl.innerHTML = html;
+  resEl.scrollTop = 0;
+}
+
+function focusOnMap(name){
+  const p = ((v2Data && v2Data.map && v2Data.map.pois) || []).find(x => x.name === name);
+  if(!p || !map) return;
+  map.setZoomAndCenter(16, [p.lng, p.lat]);
+  focusCard(name);
+}
+
+function updateRadLabel(){ radvEl.textContent = Number(radEl.value).toFixed(1) + ' km'; }
+
+// ---------- 事件 ----------
+btn.onclick = find;
+
+qEl.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'Enter'){ e.preventDefault(); find(); }
+});
+
+document.querySelectorAll('.chip').forEach(c => {
+  c.onclick = () => { qEl.value = c.textContent.trim(); find(); };
+});
+
+radEl.addEventListener('input', () => {
+  updateRadLabel();
+  if(circle && amapReady) circle.setRadius(parseFloat(radEl.value) * 1000);
+});
+
+radEl.addEventListener('change', async () => {
+  if(!lastQuery) return;
+  const r = parseFloat(radEl.value);
+  resEl.innerHTML = skeleton(2);
+  try{
+    const out = await window.pywebview.api.set_radius(lastQuery, r);
+    v2Data = out;
+    renderSlots(out.slots, out.relaxed);
+    syncMap(out.map, true);
+    render();
+  }catch(e){
+    resEl.innerHTML = `<div class="err"><b>重新检索失败</b>${esc(e.message || e)}</div>`;
+  }
+});
+
+sw.onclick = async () => {
+  compareOn = !compareOn;
+  sw.classList.toggle('on', compareOn);
+  if(!v2Data) return;
+  if(compareOn){
+    resEl.innerHTML = skeleton(2) + skeleton(2);
+    await loadCompare();
+  }
+  render();
+};
+
+// ---------- 点图片看大图 ----------
+function openZoom(src, name){
+  const z = document.getElementById('zoom');
+  const im = document.getElementById('zoomimg');
+  if(!z || !im) return;
+  im.src = src;
+  document.getElementById('zoomcap').textContent = name || '';
+  z.classList.add('on');
+}
+
+// 一张图都加载不出来时（高德偶尔图床会 404），别留一块空白
+document.addEventListener('click', e => {
+  const hit = e.target && e.target.closest ? e.target.closest('.thumb img') : null;
+  if(hit){ openZoom(hit.src, hit.dataset.name); return; }
+  const z = document.getElementById('zoom');
+  if(z && z.classList.contains('on')) z.classList.remove('on');
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
+    const z = document.getElementById('zoom');
+    if(z && z.classList.contains('on')) z.classList.remove('on');
+  }
+});
+
+// 窗口就绪
+window.addEventListener('pywebviewready', () => {
+  qEl.focus();
+  initMap();
+});
+</script>
+<div class="zoom" id="zoom"><img id="zoomimg" alt=""><div class="cap" id="zoomcap"></div></div>
+</body>
+</html>

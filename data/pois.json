@@ -1,0 +1,2881 @@
+{
+ "_meta": {
+  "说明": "模拟 POI 数据，用于本项目的功能验证与评测，不代表真实商户信息",
+  "user_location": {
+   "name": "珠江新城地铁站",
+   "lat": 23.1197,
+   "lng": 113.3218
+  },
+  "count": 198,
+  "generated_by": "src/build_pois.py（种子 42，可复现）"
+ },
+ "pois": [
+  {
+   "id": "P01",
+   "name": "炳胜品味",
+   "category": "粤菜",
+   "avg_price": 128,
+   "rating": 4.7,
+   "lat": 23.1235,
+   "lng": 113.3245,
+   "tags": [
+    "有包间",
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "脆皮叉烧",
+   "district": "天河"
+  },
+  {
+   "id": "P02",
+   "name": "陶陶居",
+   "category": "粤菜",
+   "avg_price": 96,
+   "rating": 4.5,
+   "lat": 23.1188,
+   "lng": 113.329,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "虾饺",
+   "district": "天河"
+  },
+  {
+   "id": "P03",
+   "name": "点都德",
+   "category": "粤菜",
+   "avg_price": 72,
+   "rating": 4.4,
+   "lat": 23.115,
+   "lng": 113.318,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "流沙包",
+   "district": "天河"
+  },
+  {
+   "id": "P04",
+   "name": "大鸽饭",
+   "category": "粤菜",
+   "avg_price": 88,
+   "rating": 4.3,
+   "lat": 23.13,
+   "lng": 113.33,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "红烧乳鸽",
+   "district": "天河"
+  },
+  {
+   "id": "P05",
+   "name": "广州酒家",
+   "category": "粤菜",
+   "avg_price": 110,
+   "rating": 4.6,
+   "lat": 23.128,
+   "lng": 113.315,
+   "tags": [
+    "有包间",
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "白切鸡",
+   "district": "越秀"
+  },
+  {
+   "id": "P06",
+   "name": "太艮堡毋米粥",
+   "category": "粤菜",
+   "avg_price": 95,
+   "rating": 4.2,
+   "lat": 23.112,
+   "lng": 113.335,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "毋米粥火锅",
+   "district": "海珠"
+  },
+  {
+   "id": "P07",
+   "name": "惠食佳",
+   "category": "粤菜",
+   "avg_price": 118,
+   "rating": 4.5,
+   "lat": 23.124,
+   "lng": 113.31,
+   "tags": [
+    "有包间",
+    "安静"
+   ],
+   "signature": "啫啫黄鳝",
+   "district": "越秀"
+  },
+  {
+   "id": "P08",
+   "name": "表哥茶餐厅",
+   "category": "粤菜",
+   "avg_price": 55,
+   "rating": 4.1,
+   "lat": 23.1175,
+   "lng": 113.323,
+   "tags": [
+    "可拼桌",
+    "可开发票"
+   ],
+   "signature": "菠萝油",
+   "district": "天河"
+  },
+  {
+   "id": "P09",
+   "name": "文和友龙虾馆",
+   "category": "湘菜",
+   "avg_price": 105,
+   "rating": 4.4,
+   "lat": 23.116,
+   "lng": 113.328,
+   "tags": [
+    "夜宵",
+    "有包间"
+   ],
+   "signature": "口味虾",
+   "district": "天河"
+  },
+  {
+   "id": "P10",
+   "name": "费大厨辣椒炒肉",
+   "category": "湘菜",
+   "avg_price": 68,
+   "rating": 4.5,
+   "lat": 23.121,
+   "lng": 113.327,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "辣椒炒肉",
+   "district": "天河"
+  },
+  {
+   "id": "P11",
+   "name": "农耕记",
+   "category": "湘菜",
+   "avg_price": 78,
+   "rating": 4.3,
+   "lat": 23.1265,
+   "lng": 113.322,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "土钵菜",
+   "district": "天河"
+  },
+  {
+   "id": "P12",
+   "name": "湘满楼",
+   "category": "湘菜",
+   "avg_price": 62,
+   "rating": 4.0,
+   "lat": 23.108,
+   "lng": 113.33,
+   "tags": [
+    "夜宵"
+   ],
+   "signature": "剁椒鱼头",
+   "district": "海珠"
+  },
+  {
+   "id": "P13",
+   "name": "陈麻婆豆腐",
+   "category": "川菜",
+   "avg_price": 58,
+   "rating": 4.2,
+   "lat": 23.1195,
+   "lng": 113.32,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "麻婆豆腐",
+   "district": "天河"
+  },
+  {
+   "id": "P14",
+   "name": "大龙燚火锅",
+   "category": "火锅",
+   "avg_price": 112,
+   "rating": 4.4,
+   "lat": 23.1225,
+   "lng": 113.331,
+   "tags": [
+    "有包间",
+    "夜宵"
+   ],
+   "signature": "牛油锅底",
+   "district": "天河"
+  },
+  {
+   "id": "P15",
+   "name": "蜀九香",
+   "category": "川菜",
+   "avg_price": 98,
+   "rating": 4.3,
+   "lat": 23.127,
+   "lng": 113.325,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "毛血旺",
+   "district": "天河"
+  },
+  {
+   "id": "P16",
+   "name": "小龙坎",
+   "category": "火锅",
+   "avg_price": 105,
+   "rating": 4.1,
+   "lat": 23.113,
+   "lng": 113.324,
+   "tags": [
+    "有包间",
+    "夜宵"
+   ],
+   "signature": "九宫格",
+   "district": "天河"
+  },
+  {
+   "id": "P17",
+   "name": "海底捞",
+   "category": "火锅",
+   "avg_price": 135,
+   "rating": 4.8,
+   "lat": 23.12,
+   "lng": 113.3255,
+   "tags": [
+    "有包间",
+    "适合带娃",
+    "夜宵",
+    "可开发票"
+   ],
+   "signature": "番茄锅",
+   "district": "天河"
+  },
+  {
+   "id": "P18",
+   "name": "八合里海记",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 92,
+   "rating": 4.5,
+   "lat": 23.1245,
+   "lng": 113.3195,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "吊龙",
+   "district": "天河"
+  },
+  {
+   "id": "P19",
+   "name": "椰子鸡·椰妹",
+   "category": "火锅",
+   "avg_price": 88,
+   "rating": 4.3,
+   "lat": 23.1155,
+   "lng": 113.326,
+   "tags": [
+    "适合带娃",
+    "有包间"
+   ],
+   "signature": "椰子鸡",
+   "district": "天河"
+  },
+  {
+   "id": "P20",
+   "name": "争鲜回转寿司",
+   "category": "日料",
+   "avg_price": 78,
+   "rating": 4.1,
+   "lat": 23.118,
+   "lng": 113.3225,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "三文鱼寿司",
+   "district": "天河"
+  },
+  {
+   "id": "P21",
+   "name": "鮨一",
+   "category": "日料",
+   "avg_price": 320,
+   "rating": 4.7,
+   "lat": 23.1215,
+   "lng": 113.316,
+   "tags": [
+    "有包间",
+    "安静",
+    "可开发票"
+   ],
+   "signature": "omakase",
+   "district": "天河"
+  },
+  {
+   "id": "P22",
+   "name": "烧肉先生",
+   "category": "日式烤肉",
+   "avg_price": 145,
+   "rating": 4.4,
+   "lat": 23.123,
+   "lng": 113.3285,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "厚切牛舌",
+   "district": "天河"
+  },
+  {
+   "id": "P23",
+   "name": "木屋烧烤",
+   "category": "烧烤",
+   "avg_price": 65,
+   "rating": 4.0,
+   "lat": 23.119,
+   "lng": 113.3265,
+   "tags": [
+    "夜宵",
+    "可拼桌"
+   ],
+   "signature": "烤生蚝",
+   "district": "天河"
+  },
+  {
+   "id": "P24",
+   "name": "很久以前羊肉串",
+   "category": "烧烤",
+   "avg_price": 82,
+   "rating": 4.3,
+   "lat": 23.125,
+   "lng": 113.3275,
+   "tags": [
+    "夜宵",
+    "有包间"
+   ],
+   "signature": "羊肉串",
+   "district": "天河"
+  },
+  {
+   "id": "P25",
+   "name": "王品牛排",
+   "category": "西餐",
+   "avg_price": 268,
+   "rating": 4.6,
+   "lat": 23.1205,
+   "lng": 113.3175,
+   "tags": [
+    "有包间",
+    "安静",
+    "可开发票"
+   ],
+   "signature": "台塑牛排",
+   "district": "天河"
+  },
+  {
+   "id": "P26",
+   "name": "蓝蛙",
+   "category": "西餐",
+   "avg_price": 158,
+   "rating": 4.3,
+   "lat": 23.122,
+   "lng": 113.3235,
+   "tags": [
+    "安静"
+   ],
+   "signature": "汉堡",
+   "district": "天河"
+  },
+  {
+   "id": "P27",
+   "name": "萨莉亚",
+   "category": "西餐",
+   "avg_price": 42,
+   "rating": 3.9,
+   "lat": 23.117,
+   "lng": 113.321,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "意面",
+   "district": "天河"
+  },
+  {
+   "id": "P28",
+   "name": "泰香米",
+   "category": "东南亚菜",
+   "avg_price": 108,
+   "rating": 4.4,
+   "lat": 23.126,
+   "lng": 113.321,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "冬阴功",
+   "district": "天河"
+  },
+  {
+   "id": "P29",
+   "name": "西贡妈妈",
+   "category": "东南亚菜",
+   "avg_price": 76,
+   "rating": 4.2,
+   "lat": 23.1145,
+   "lng": 113.3275,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "越南河粉",
+   "district": "天河"
+  },
+  {
+   "id": "P30",
+   "name": "和府捞面",
+   "category": "面食",
+   "avg_price": 45,
+   "rating": 4.1,
+   "lat": 23.1185,
+   "lng": 113.3245,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "草本汤面",
+   "district": "天河"
+  },
+  {
+   "id": "P31",
+   "name": "遇见小面",
+   "category": "面食",
+   "avg_price": 38,
+   "rating": 4.0,
+   "lat": 23.12,
+   "lng": 113.32,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "小面",
+   "district": "天河"
+  },
+  {
+   "id": "P32",
+   "name": "黄沙水产",
+   "category": "海鲜",
+   "avg_price": 188,
+   "rating": 4.5,
+   "lat": 23.106,
+   "lng": 113.335,
+   "tags": [
+    "有包间",
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "清蒸石斑",
+   "district": "海珠"
+  },
+  {
+   "id": "P33",
+   "name": "蟹将军",
+   "category": "海鲜",
+   "avg_price": 156,
+   "rating": 4.3,
+   "lat": 23.129,
+   "lng": 113.326,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "帝王蟹",
+   "district": "天河"
+  },
+  {
+   "id": "P34",
+   "name": "素菜馆·慈心",
+   "category": "素食",
+   "avg_price": 68,
+   "rating": 4.2,
+   "lat": 23.121,
+   "lng": 113.319,
+   "tags": [
+    "安静",
+    "有包间"
+   ],
+   "signature": "罗汉斋",
+   "district": "天河"
+  },
+  {
+   "id": "P35",
+   "name": "呷哺呷哺",
+   "category": "火锅",
+   "avg_price": 58,
+   "rating": 3.8,
+   "lat": 23.1165,
+   "lng": 113.3235,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "小火锅",
+   "district": "天河"
+  },
+  {
+   "id": "P36",
+   "name": "西贝莜面村",
+   "category": "西北菜",
+   "avg_price": 86,
+   "rating": 4.3,
+   "lat": 23.1235,
+   "lng": 113.3215,
+   "tags": [
+    "有包间",
+    "适合带娃"
+   ],
+   "signature": "莜面鱼鱼",
+   "district": "天河"
+  },
+  {
+   "id": "P37",
+   "name": "北疆饭店",
+   "category": "西北菜",
+   "avg_price": 95,
+   "rating": 4.2,
+   "lat": 23.1275,
+   "lng": 113.318,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "大盘鸡",
+   "district": "天河"
+  },
+  {
+   "id": "P38",
+   "name": "老乡鸡",
+   "category": "快餐简餐",
+   "avg_price": 32,
+   "rating": 4.0,
+   "lat": 23.119,
+   "lng": 113.322,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "鸡汤",
+   "district": "天河"
+  },
+  {
+   "id": "P39",
+   "name": "喜家德水饺",
+   "category": "面食",
+   "avg_price": 40,
+   "rating": 4.1,
+   "lat": 23.1175,
+   "lng": 113.325,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "虾仁水饺",
+   "district": "天河"
+  },
+  {
+   "id": "P40",
+   "name": "南京大牌档",
+   "category": "江浙菜",
+   "avg_price": 82,
+   "rating": 4.3,
+   "lat": 23.1245,
+   "lng": 113.329,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "盐水鸭",
+   "district": "天河"
+  },
+  {
+   "id": "P41",
+   "name": "绿茶餐厅",
+   "category": "江浙菜",
+   "avg_price": 69,
+   "rating": 4.1,
+   "lat": 23.1225,
+   "lng": 113.317,
+   "tags": [
+    "适合带娃",
+    "有包间"
+   ],
+   "signature": "面包诱惑",
+   "district": "天河"
+  },
+  {
+   "id": "P42",
+   "name": "海底捞（琶洲店）",
+   "category": "火锅",
+   "avg_price": 132,
+   "rating": 4.7,
+   "lat": 23.1,
+   "lng": 113.36,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "适合带娃"
+   ],
+   "signature": "番茄锅",
+   "district": "海珠"
+  },
+  {
+   "id": "P43",
+   "name": "粤垦路猪肚鸡",
+   "category": "粤菜",
+   "avg_price": 78,
+   "rating": 4.2,
+   "lat": 23.14,
+   "lng": 113.335,
+   "tags": [
+    "有包间",
+    "可停车",
+    "夜宵"
+   ],
+   "signature": "猪肚鸡",
+   "district": "天河"
+  },
+  {
+   "id": "P44",
+   "name": "鹤山祥和",
+   "category": "粤菜",
+   "avg_price": 105,
+   "rating": 4.4,
+   "lat": 23.135,
+   "lng": 113.31,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "烧鹅",
+   "district": "白云"
+  },
+  {
+   "id": "P45",
+   "name": "一味鲜",
+   "category": "潮汕菜",
+   "avg_price": 88,
+   "rating": 4.3,
+   "lat": 23.113,
+   "lng": 113.318,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "卤鹅",
+   "district": "天河"
+  },
+  {
+   "id": "P46",
+   "name": "咖啡陪你",
+   "category": "甜品咖啡",
+   "avg_price": 48,
+   "rating": 4.0,
+   "lat": 23.1208,
+   "lng": 113.323,
+   "tags": [
+    "安静",
+    "可拼桌"
+   ],
+   "signature": "拿铁",
+   "district": "天河"
+  },
+  {
+   "id": "P47",
+   "name": "喜茶",
+   "category": "甜品咖啡",
+   "avg_price": 28,
+   "rating": 4.2,
+   "lat": 23.1198,
+   "lng": 113.324,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "多肉葡萄",
+   "district": "天河"
+  },
+  {
+   "id": "P48",
+   "name": "粤菜师傅·家宴",
+   "category": "粤菜",
+   "avg_price": 138,
+   "rating": 4.6,
+   "lat": 23.1255,
+   "lng": 113.3155,
+   "tags": [
+    "有包间",
+    "安静",
+    "可开发票"
+   ],
+   "signature": "盆菜",
+   "district": "天河"
+  },
+  {
+   "id": "P49",
+   "name": "胖哥俩肉蟹煲",
+   "category": "江浙菜",
+   "avg_price": 76,
+   "rating": 4.2,
+   "lat": 23.116,
+   "lng": 113.32,
+   "tags": [
+    "夜宵",
+    "有包间"
+   ],
+   "signature": "肉蟹煲",
+   "district": "天河"
+  },
+  {
+   "id": "P50",
+   "name": "蜀大侠火锅",
+   "category": "火锅",
+   "avg_price": 118,
+   "rating": 4.2,
+   "lat": 23.1285,
+   "lng": 113.323,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "可停车"
+   ],
+   "signature": "毛肚",
+   "district": "天河"
+  },
+  {
+   "id": "G051",
+   "name": "阿婆小馆",
+   "category": "潮汕菜",
+   "avg_price": 120,
+   "rating": 4.3,
+   "lat": 23.119,
+   "lng": 113.3266,
+   "tags": [
+    "有包间",
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "卤鹅",
+   "district": "天河"
+  },
+  {
+   "id": "G052",
+   "name": "禾田食堂",
+   "category": "潮汕菜",
+   "avg_price": 65,
+   "rating": 3.9,
+   "lat": 23.1046,
+   "lng": 113.3095,
+   "tags": [
+    "可开发票",
+    "宠物友好"
+   ],
+   "signature": "牛肉丸",
+   "district": "海珠"
+  },
+  {
+   "id": "G053",
+   "name": "巷子饭店",
+   "category": "潮汕菜",
+   "avg_price": 135,
+   "rating": 4.7,
+   "lat": 23.1208,
+   "lng": 113.3186,
+   "tags": [
+    "适合带娃"
+   ],
+   "signature": "蚝烙",
+   "district": "天河"
+  },
+  {
+   "id": "G054",
+   "name": "阿婆菜馆",
+   "category": "潮汕菜",
+   "avg_price": 65,
+   "rating": 4.2,
+   "lat": 23.1251,
+   "lng": 113.3134,
+   "tags": [],
+   "signature": "蚝烙",
+   "district": "天河"
+  },
+  {
+   "id": "G055",
+   "name": "食光餐厅",
+   "category": "潮汕菜",
+   "avg_price": 110,
+   "rating": 4.4,
+   "lat": 23.0754,
+   "lng": 113.2774,
+   "tags": [
+    "安静",
+    "可开发票"
+   ],
+   "signature": "蚝烙",
+   "district": "天河"
+  },
+  {
+   "id": "G056",
+   "name": "南山私厨",
+   "category": "潮汕菜",
+   "avg_price": 140,
+   "rating": 3.9,
+   "lat": 23.0739,
+   "lng": 113.3686,
+   "tags": [
+    "安静"
+   ],
+   "signature": "蚝烙",
+   "district": "天河"
+  },
+  {
+   "id": "G057",
+   "name": "陈记饭店",
+   "category": "潮汕菜",
+   "avg_price": 115,
+   "rating": 4.4,
+   "lat": 23.1178,
+   "lng": 113.3061,
+   "tags": [
+    "有包间",
+    "适合带娃"
+   ],
+   "signature": "卤鹅",
+   "district": "越秀"
+  },
+  {
+   "id": "G058",
+   "name": "拾味菜馆",
+   "category": "潮汕菜",
+   "avg_price": 135,
+   "rating": 4.1,
+   "lat": 23.0721,
+   "lng": 113.3589,
+   "tags": [
+    "有包间",
+    "可开发票",
+    "适合带娃"
+   ],
+   "signature": "牛肉丸",
+   "district": "白云"
+  },
+  {
+   "id": "G059",
+   "name": "码头食堂",
+   "category": "潮汕菜",
+   "avg_price": 70,
+   "rating": 4.0,
+   "lat": 23.1193,
+   "lng": 113.3083,
+   "tags": [
+    "可拼桌",
+    "夜宵"
+   ],
+   "signature": "卤鹅",
+   "district": "白云"
+  },
+  {
+   "id": "G060",
+   "name": "食光食堂",
+   "category": "潮汕菜",
+   "avg_price": 65,
+   "rating": 4.1,
+   "lat": 23.1243,
+   "lng": 113.3259,
+   "tags": [
+    "夜宵",
+    "可拼桌"
+   ],
+   "signature": "蚝烙",
+   "district": "海珠"
+  },
+  {
+   "id": "G061",
+   "name": "大娘家私厨",
+   "category": "川菜",
+   "avg_price": 120,
+   "rating": 3.7,
+   "lat": 23.182,
+   "lng": 113.3267,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "回锅肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G062",
+   "name": "客味小馆",
+   "category": "川菜",
+   "avg_price": 80,
+   "rating": 4.6,
+   "lat": 23.1687,
+   "lng": 113.2691,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "安静"
+   ],
+   "signature": "回锅肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G063",
+   "name": "鲜煮意菜馆",
+   "category": "川菜",
+   "avg_price": 55,
+   "rating": 3.6,
+   "lat": 23.0658,
+   "lng": 113.307,
+   "tags": [
+    "可停车",
+    "可拼桌"
+   ],
+   "signature": "回锅肉",
+   "district": "海珠"
+  },
+  {
+   "id": "G064",
+   "name": "大娘家食府",
+   "category": "川菜",
+   "avg_price": 65,
+   "rating": 3.8,
+   "lat": 23.102,
+   "lng": 113.3131,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "可停车"
+   ],
+   "signature": "回锅肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G065",
+   "name": "梁记饭店",
+   "category": "川菜",
+   "avg_price": 65,
+   "rating": 4.5,
+   "lat": 23.0637,
+   "lng": 113.3538,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "可开发票"
+   ],
+   "signature": "回锅肉",
+   "district": "海珠"
+  },
+  {
+   "id": "G066",
+   "name": "码头饭店",
+   "category": "川菜",
+   "avg_price": 80,
+   "rating": 4.3,
+   "lat": 23.1477,
+   "lng": 113.3508,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "水煮鱼",
+   "district": "天河"
+  },
+  {
+   "id": "G067",
+   "name": "客味饭店",
+   "category": "川菜",
+   "avg_price": 100,
+   "rating": 3.9,
+   "lat": 23.1259,
+   "lng": 113.3248,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "回锅肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G068",
+   "name": "十三行菜馆",
+   "category": "川菜",
+   "avg_price": 85,
+   "rating": 4.6,
+   "lat": 23.1588,
+   "lng": 113.283,
+   "tags": [],
+   "signature": "水煮鱼",
+   "district": "天河"
+  },
+  {
+   "id": "G069",
+   "name": "陈记小馆",
+   "category": "川菜",
+   "avg_price": 50,
+   "rating": 3.7,
+   "lat": 23.0908,
+   "lng": 113.3382,
+   "tags": [
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "毛血旺",
+   "district": "海珠"
+  },
+  {
+   "id": "G070",
+   "name": "一品食府",
+   "category": "湘菜",
+   "avg_price": 110,
+   "rating": 3.9,
+   "lat": 23.1234,
+   "lng": 113.3322,
+   "tags": [],
+   "signature": "剁椒鱼头",
+   "district": "天河"
+  },
+  {
+   "id": "G071",
+   "name": "食光饭店",
+   "category": "湘菜",
+   "avg_price": 80,
+   "rating": 3.8,
+   "lat": 23.0603,
+   "lng": 113.3007,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "可停车"
+   ],
+   "signature": "小炒肉",
+   "district": "白云"
+  },
+  {
+   "id": "G072",
+   "name": "家味食堂",
+   "category": "湘菜",
+   "avg_price": 65,
+   "rating": 4.4,
+   "lat": 23.1482,
+   "lng": 113.3338,
+   "tags": [
+    "有包间",
+    "适合带娃"
+   ],
+   "signature": "腊味合蒸",
+   "district": "白云"
+  },
+  {
+   "id": "G073",
+   "name": "鲜煮意餐厅",
+   "category": "湘菜",
+   "avg_price": 60,
+   "rating": 3.7,
+   "lat": 23.1425,
+   "lng": 113.3169,
+   "tags": [
+    "可停车",
+    "可开发票"
+   ],
+   "signature": "小炒肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G074",
+   "name": "李记饭店",
+   "category": "湘菜",
+   "avg_price": 50,
+   "rating": 4.1,
+   "lat": 23.1423,
+   "lng": 113.2886,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "腊味合蒸",
+   "district": "越秀"
+  },
+  {
+   "id": "G075",
+   "name": "好味饭店",
+   "category": "湘菜",
+   "avg_price": 90,
+   "rating": 4.4,
+   "lat": 23.1245,
+   "lng": 113.3247,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "小炒肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G076",
+   "name": "老码头菜馆",
+   "category": "湘菜",
+   "avg_price": 70,
+   "rating": 4.3,
+   "lat": 23.1125,
+   "lng": 113.3116,
+   "tags": [],
+   "signature": "腊味合蒸",
+   "district": "天河"
+  },
+  {
+   "id": "G077",
+   "name": "半山私厨",
+   "category": "火锅",
+   "avg_price": 70,
+   "rating": 3.9,
+   "lat": 23.118,
+   "lng": 113.3407,
+   "tags": [],
+   "signature": "番茄锅",
+   "district": "海珠"
+  },
+  {
+   "id": "G078",
+   "name": "淳味食府",
+   "category": "火锅",
+   "avg_price": 125,
+   "rating": 3.9,
+   "lat": 23.0793,
+   "lng": 113.258,
+   "tags": [
+    "有包间",
+    "适合带娃",
+    "可开发票"
+   ],
+   "signature": "牛油锅",
+   "district": "越秀"
+  },
+  {
+   "id": "G079",
+   "name": "客味菜馆",
+   "category": "火锅",
+   "avg_price": 90,
+   "rating": 3.9,
+   "lat": 23.1107,
+   "lng": 113.2742,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "适合带娃"
+   ],
+   "signature": "牛油锅",
+   "district": "天河"
+  },
+  {
+   "id": "G080",
+   "name": "陈记酒家",
+   "category": "火锅",
+   "avg_price": 130,
+   "rating": 3.8,
+   "lat": 23.1776,
+   "lng": 113.3397,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "番茄锅",
+   "district": "白云"
+  },
+  {
+   "id": "G081",
+   "name": "禾田餐厅",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 110,
+   "rating": 4.6,
+   "lat": 23.1295,
+   "lng": 113.3179,
+   "tags": [],
+   "signature": "胸口油",
+   "district": "越秀"
+  },
+  {
+   "id": "G082",
+   "name": "南山饭店",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 100,
+   "rating": 4.4,
+   "lat": 23.116,
+   "lng": 113.3264,
+   "tags": [],
+   "signature": "胸口油",
+   "district": "天河"
+  },
+  {
+   "id": "G083",
+   "name": "三味食府",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 90,
+   "rating": 4.7,
+   "lat": 23.149,
+   "lng": 113.2898,
+   "tags": [
+    "安静",
+    "宠物友好"
+   ],
+   "signature": "吊龙",
+   "district": "越秀"
+  },
+  {
+   "id": "G084",
+   "name": "好味食府",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 125,
+   "rating": 4.5,
+   "lat": 23.1431,
+   "lng": 113.31,
+   "tags": [
+    "宠物友好",
+    "安静"
+   ],
+   "signature": "吊龙",
+   "district": "白云"
+  },
+  {
+   "id": "G085",
+   "name": "家味饭店",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 140,
+   "rating": 3.9,
+   "lat": 23.1304,
+   "lng": 113.3885,
+   "tags": [
+    "适合带娃"
+   ],
+   "signature": "胸口油",
+   "district": "越秀"
+  },
+  {
+   "id": "G086",
+   "name": "客味食堂",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 95,
+   "rating": 4.4,
+   "lat": 23.1397,
+   "lng": 113.3319,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "胸口油",
+   "district": "海珠"
+  },
+  {
+   "id": "G087",
+   "name": "淳味食堂",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 145,
+   "rating": 4.0,
+   "lat": 23.1302,
+   "lng": 113.3196,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "匙柄",
+   "district": "白云"
+  },
+  {
+   "id": "G088",
+   "name": "梁记食堂",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 115,
+   "rating": 3.6,
+   "lat": 23.091,
+   "lng": 113.3492,
+   "tags": [
+    "可停车"
+   ],
+   "signature": "胸口油",
+   "district": "越秀"
+  },
+  {
+   "id": "G089",
+   "name": "淳味酒家",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 90,
+   "rating": 4.2,
+   "lat": 23.1158,
+   "lng": 113.3147,
+   "tags": [
+    "有包间",
+    "可开发票"
+   ],
+   "signature": "胸口油",
+   "district": "白云"
+  },
+  {
+   "id": "G090",
+   "name": "阿婆食府",
+   "category": "潮汕牛肉火锅",
+   "avg_price": 90,
+   "rating": 4.3,
+   "lat": 23.0716,
+   "lng": 113.3032,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "可开发票"
+   ],
+   "signature": "匙柄",
+   "district": "白云"
+  },
+  {
+   "id": "G091",
+   "name": "同福菜馆",
+   "category": "日料",
+   "avg_price": 140,
+   "rating": 4.4,
+   "lat": 23.1191,
+   "lng": 113.3247,
+   "tags": [
+    "有包间",
+    "可拼桌",
+    "可开发票"
+   ],
+   "signature": "天妇罗",
+   "district": "白云"
+  },
+  {
+   "id": "G092",
+   "name": "李记私厨",
+   "category": "日料",
+   "avg_price": 165,
+   "rating": 3.7,
+   "lat": 23.1136,
+   "lng": 113.2467,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "刺身拼盘",
+   "district": "海珠"
+  },
+  {
+   "id": "G093",
+   "name": "大娘家小馆",
+   "category": "日料",
+   "avg_price": 100,
+   "rating": 4.1,
+   "lat": 23.136,
+   "lng": 113.3245,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "天妇罗",
+   "district": "越秀"
+  },
+  {
+   "id": "G094",
+   "name": "大娘家食堂",
+   "category": "日料",
+   "avg_price": 160,
+   "rating": 3.9,
+   "lat": 23.096,
+   "lng": 113.3406,
+   "tags": [
+    "有包间",
+    "可停车",
+    "宠物友好"
+   ],
+   "signature": "天妇罗",
+   "district": "白云"
+  },
+  {
+   "id": "G095",
+   "name": "客味私厨",
+   "category": "日料",
+   "avg_price": 80,
+   "rating": 4.7,
+   "lat": 23.1313,
+   "lng": 113.3041,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "寿司",
+   "district": "白云"
+  },
+  {
+   "id": "G096",
+   "name": "大娘家菜馆",
+   "category": "日料",
+   "avg_price": 170,
+   "rating": 4.4,
+   "lat": 23.1522,
+   "lng": 113.2951,
+   "tags": [
+    "夜宵"
+   ],
+   "signature": "寿司",
+   "district": "白云"
+  },
+  {
+   "id": "G097",
+   "name": "粤海食府",
+   "category": "日料",
+   "avg_price": 80,
+   "rating": 4.4,
+   "lat": 23.1166,
+   "lng": 113.3461,
+   "tags": [
+    "有包间",
+    "可停车",
+    "安静"
+   ],
+   "signature": "刺身拼盘",
+   "district": "白云"
+  },
+  {
+   "id": "G098",
+   "name": "大娘家餐厅",
+   "category": "日料",
+   "avg_price": 120,
+   "rating": 4.6,
+   "lat": 23.0849,
+   "lng": 113.344,
+   "tags": [
+    "有包间",
+    "夜宵"
+   ],
+   "signature": "天妇罗",
+   "district": "白云"
+  },
+  {
+   "id": "G099",
+   "name": "阿婆饭店",
+   "category": "日料",
+   "avg_price": 130,
+   "rating": 4.2,
+   "lat": 23.0992,
+   "lng": 113.3925,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "寿司",
+   "district": "白云"
+  },
+  {
+   "id": "G100",
+   "name": "巷子餐厅",
+   "category": "日式烤肉",
+   "avg_price": 140,
+   "rating": 4.7,
+   "lat": 23.1052,
+   "lng": 113.2936,
+   "tags": [
+    "安静",
+    "夜宵"
+   ],
+   "signature": "厚切牛舌",
+   "district": "天河"
+  },
+  {
+   "id": "G101",
+   "name": "鲜煮意私厨",
+   "category": "日式烤肉",
+   "avg_price": 160,
+   "rating": 4.5,
+   "lat": 23.1079,
+   "lng": 113.3249,
+   "tags": [
+    "有包间",
+    "适合带娃"
+   ],
+   "signature": "牛小排",
+   "district": "海珠"
+  },
+  {
+   "id": "G102",
+   "name": "阿婆餐厅",
+   "category": "日式烤肉",
+   "avg_price": 175,
+   "rating": 4.8,
+   "lat": 23.1188,
+   "lng": 113.3875,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "牛小排",
+   "district": "越秀"
+  },
+  {
+   "id": "G103",
+   "name": "拾味餐厅",
+   "category": "日式烤肉",
+   "avg_price": 165,
+   "rating": 4.3,
+   "lat": 23.0868,
+   "lng": 113.2713,
+   "tags": [],
+   "signature": "厚切牛舌",
+   "district": "越秀"
+  },
+  {
+   "id": "G104",
+   "name": "南山食府",
+   "category": "日式烤肉",
+   "avg_price": 140,
+   "rating": 4.3,
+   "lat": 23.1298,
+   "lng": 113.3181,
+   "tags": [
+    "宠物友好"
+   ],
+   "signature": "厚切牛舌",
+   "district": "越秀"
+  },
+  {
+   "id": "G105",
+   "name": "李记小馆",
+   "category": "日式烤肉",
+   "avg_price": 205,
+   "rating": 4.6,
+   "lat": 23.1298,
+   "lng": 113.3236,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "宠物友好"
+   ],
+   "signature": "厚切牛舌",
+   "district": "海珠"
+  },
+  {
+   "id": "G106",
+   "name": "一品菜馆",
+   "category": "日式烤肉",
+   "avg_price": 145,
+   "rating": 3.7,
+   "lat": 23.1638,
+   "lng": 113.344,
+   "tags": [],
+   "signature": "牛小排",
+   "district": "白云"
+  },
+  {
+   "id": "G107",
+   "name": "同福食堂",
+   "category": "日式烤肉",
+   "avg_price": 170,
+   "rating": 4.6,
+   "lat": 23.1164,
+   "lng": 113.2862,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "牛小排",
+   "district": "海珠"
+  },
+  {
+   "id": "G108",
+   "name": "得闲私厨",
+   "category": "日式烤肉",
+   "avg_price": 190,
+   "rating": 3.8,
+   "lat": 23.1713,
+   "lng": 113.3558,
+   "tags": [],
+   "signature": "厚切牛舌",
+   "district": "海珠"
+  },
+  {
+   "id": "G109",
+   "name": "老码头饭店",
+   "category": "日式烤肉",
+   "avg_price": 180,
+   "rating": 3.7,
+   "lat": 23.1389,
+   "lng": 113.3022,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "牛小排",
+   "district": "白云"
+  },
+  {
+   "id": "G110",
+   "name": "老码头小馆",
+   "category": "烧烤",
+   "avg_price": 85,
+   "rating": 4.0,
+   "lat": 23.1005,
+   "lng": 113.325,
+   "tags": [
+    "宠物友好"
+   ],
+   "signature": "羊肉串",
+   "district": "越秀"
+  },
+  {
+   "id": "G111",
+   "name": "禾田私厨",
+   "category": "烧烤",
+   "avg_price": 70,
+   "rating": 4.0,
+   "lat": 23.0773,
+   "lng": 113.3296,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "羊肉串",
+   "district": "海珠"
+  },
+  {
+   "id": "G112",
+   "name": "三味饭店",
+   "category": "烧烤",
+   "avg_price": 70,
+   "rating": 3.9,
+   "lat": 23.1163,
+   "lng": 113.3018,
+   "tags": [
+    "有包间",
+    "可拼桌",
+    "可开发票"
+   ],
+   "signature": "羊肉串",
+   "district": "海珠"
+  },
+  {
+   "id": "G113",
+   "name": "拾味酒家",
+   "category": "烧烤",
+   "avg_price": 100,
+   "rating": 3.9,
+   "lat": 23.0501,
+   "lng": 113.31,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "烤生蚝",
+   "district": "海珠"
+  },
+  {
+   "id": "G114",
+   "name": "巷子菜馆",
+   "category": "烧烤",
+   "avg_price": 45,
+   "rating": 3.7,
+   "lat": 23.1137,
+   "lng": 113.3646,
+   "tags": [
+    "适合带娃",
+    "可开发票"
+   ],
+   "signature": "烤生蚝",
+   "district": "海珠"
+  },
+  {
+   "id": "G115",
+   "name": "得闲小馆",
+   "category": "烧烤",
+   "avg_price": 80,
+   "rating": 4.3,
+   "lat": 23.133,
+   "lng": 113.355,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "烤茄子",
+   "district": "天河"
+  },
+  {
+   "id": "G116",
+   "name": "锦记饭店",
+   "category": "烧烤",
+   "avg_price": 55,
+   "rating": 4.5,
+   "lat": 23.1757,
+   "lng": 113.3016,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "羊肉串",
+   "district": "白云"
+  },
+  {
+   "id": "G117",
+   "name": "锦记小馆",
+   "category": "烧烤",
+   "avg_price": 115,
+   "rating": 4.7,
+   "lat": 23.0999,
+   "lng": 113.3084,
+   "tags": [
+    "有包间",
+    "可拼桌",
+    "可停车"
+   ],
+   "signature": "烤生蚝",
+   "district": "越秀"
+  },
+  {
+   "id": "G118",
+   "name": "老码头食堂",
+   "category": "烧烤",
+   "avg_price": 65,
+   "rating": 4.1,
+   "lat": 23.1202,
+   "lng": 113.3309,
+   "tags": [],
+   "signature": "烤茄子",
+   "district": "白云"
+  },
+  {
+   "id": "G119",
+   "name": "一品小馆",
+   "category": "西餐",
+   "avg_price": 105,
+   "rating": 4.3,
+   "lat": 23.1147,
+   "lng": 113.3021,
+   "tags": [
+    "可停车"
+   ],
+   "signature": "汉堡",
+   "district": "越秀"
+  },
+  {
+   "id": "G120",
+   "name": "阿婆酒家",
+   "category": "西餐",
+   "avg_price": 180,
+   "rating": 4.1,
+   "lat": 23.1738,
+   "lng": 113.3501,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "意面",
+   "district": "海珠"
+  },
+  {
+   "id": "G121",
+   "name": "锦记餐厅",
+   "category": "西餐",
+   "avg_price": 155,
+   "rating": 4.7,
+   "lat": 23.0516,
+   "lng": 113.3216,
+   "tags": [],
+   "signature": "汉堡",
+   "district": "海珠"
+  },
+  {
+   "id": "G122",
+   "name": "大娘家酒家",
+   "category": "西餐",
+   "avg_price": 145,
+   "rating": 4.3,
+   "lat": 23.1203,
+   "lng": 113.3267,
+   "tags": [
+    "可拼桌",
+    "可停车"
+   ],
+   "signature": "牛排",
+   "district": "白云"
+  },
+  {
+   "id": "G123",
+   "name": "一品私厨",
+   "category": "西餐",
+   "avg_price": 135,
+   "rating": 4.0,
+   "lat": 23.1138,
+   "lng": 113.3576,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "牛排",
+   "district": "越秀"
+  },
+  {
+   "id": "G124",
+   "name": "食光私厨",
+   "category": "西餐",
+   "avg_price": 110,
+   "rating": 3.9,
+   "lat": 23.1076,
+   "lng": 113.3755,
+   "tags": [
+    "可停车",
+    "夜宵"
+   ],
+   "signature": "牛排",
+   "district": "白云"
+  },
+  {
+   "id": "G125",
+   "name": "小院饭店",
+   "category": "西餐",
+   "avg_price": 175,
+   "rating": 4.2,
+   "lat": 23.1796,
+   "lng": 113.3223,
+   "tags": [
+    "夜宵"
+   ],
+   "signature": "汉堡",
+   "district": "白云"
+  },
+  {
+   "id": "G126",
+   "name": "梁记菜馆",
+   "category": "西餐",
+   "avg_price": 145,
+   "rating": 3.7,
+   "lat": 23.1356,
+   "lng": 113.3796,
+   "tags": [
+    "夜宵"
+   ],
+   "signature": "汉堡",
+   "district": "越秀"
+  },
+  {
+   "id": "G127",
+   "name": "淳味菜馆",
+   "category": "东南亚菜",
+   "avg_price": 125,
+   "rating": 4.7,
+   "lat": 23.1439,
+   "lng": 113.3241,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "河粉",
+   "district": "越秀"
+  },
+  {
+   "id": "G128",
+   "name": "半山菜馆",
+   "category": "东南亚菜",
+   "avg_price": 105,
+   "rating": 4.3,
+   "lat": 23.0674,
+   "lng": 113.3186,
+   "tags": [
+    "有包间",
+    "夜宵"
+   ],
+   "signature": "咖喱蟹",
+   "district": "越秀"
+  },
+  {
+   "id": "G129",
+   "name": "十三行食堂",
+   "category": "东南亚菜",
+   "avg_price": 145,
+   "rating": 4.0,
+   "lat": 23.1473,
+   "lng": 113.2934,
+   "tags": [
+    "宠物友好"
+   ],
+   "signature": "河粉",
+   "district": "海珠"
+  },
+  {
+   "id": "G130",
+   "name": "同福私厨",
+   "category": "东南亚菜",
+   "avg_price": 135,
+   "rating": 4.6,
+   "lat": 23.113,
+   "lng": 113.345,
+   "tags": [
+    "夜宵",
+    "安静"
+   ],
+   "signature": "河粉",
+   "district": "越秀"
+  },
+  {
+   "id": "G131",
+   "name": "得闲餐厅",
+   "category": "东南亚菜",
+   "avg_price": 110,
+   "rating": 3.8,
+   "lat": 23.1227,
+   "lng": 113.3015,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "可开发票"
+   ],
+   "signature": "河粉",
+   "district": "海珠"
+  },
+  {
+   "id": "G132",
+   "name": "食光菜馆",
+   "category": "东南亚菜",
+   "avg_price": 140,
+   "rating": 4.5,
+   "lat": 23.0608,
+   "lng": 113.3471,
+   "tags": [
+    "可停车"
+   ],
+   "signature": "咖喱蟹",
+   "district": "海珠"
+  },
+  {
+   "id": "G133",
+   "name": "粤海私厨",
+   "category": "东南亚菜",
+   "avg_price": 115,
+   "rating": 4.4,
+   "lat": 23.1462,
+   "lng": 113.3377,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "可拼桌"
+   ],
+   "signature": "咖喱蟹",
+   "district": "天河"
+  },
+  {
+   "id": "G134",
+   "name": "同福食府",
+   "category": "东南亚菜",
+   "avg_price": 115,
+   "rating": 4.4,
+   "lat": 23.1121,
+   "lng": 113.3029,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "冬阴功",
+   "district": "天河"
+  },
+  {
+   "id": "G135",
+   "name": "码头食府",
+   "category": "东南亚菜",
+   "avg_price": 90,
+   "rating": 3.8,
+   "lat": 23.1155,
+   "lng": 113.3274,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "冬阴功",
+   "district": "白云"
+  },
+  {
+   "id": "G136",
+   "name": "好味菜馆",
+   "category": "面食",
+   "avg_price": 55,
+   "rating": 3.9,
+   "lat": 23.1363,
+   "lng": 113.3108,
+   "tags": [
+    "有包间",
+    "可开发票"
+   ],
+   "signature": "牛肉面",
+   "district": "白云"
+  },
+  {
+   "id": "G137",
+   "name": "梁记酒家",
+   "category": "面食",
+   "avg_price": 70,
+   "rating": 4.1,
+   "lat": 23.1469,
+   "lng": 113.3671,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "云吞面",
+   "district": "越秀"
+  },
+  {
+   "id": "G138",
+   "name": "家味酒家",
+   "category": "面食",
+   "avg_price": 70,
+   "rating": 3.6,
+   "lat": 23.1682,
+   "lng": 113.3636,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "手工面",
+   "district": "白云"
+  },
+  {
+   "id": "G139",
+   "name": "锦记菜馆",
+   "category": "面食",
+   "avg_price": 40,
+   "rating": 4.6,
+   "lat": 23.1032,
+   "lng": 113.2798,
+   "tags": [],
+   "signature": "云吞面",
+   "district": "越秀"
+  },
+  {
+   "id": "G140",
+   "name": "陈记餐厅",
+   "category": "面食",
+   "avg_price": 55,
+   "rating": 4.0,
+   "lat": 23.102,
+   "lng": 113.2994,
+   "tags": [
+    "宠物友好",
+    "可开发票"
+   ],
+   "signature": "云吞面",
+   "district": "天河"
+  },
+  {
+   "id": "G141",
+   "name": "拾味食府",
+   "category": "面食",
+   "avg_price": 55,
+   "rating": 4.5,
+   "lat": 23.1649,
+   "lng": 113.353,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "安静"
+   ],
+   "signature": "云吞面",
+   "district": "海珠"
+  },
+  {
+   "id": "G142",
+   "name": "鲜煮意小馆",
+   "category": "面食",
+   "avg_price": 65,
+   "rating": 4.2,
+   "lat": 23.129,
+   "lng": 113.3019,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "牛肉面",
+   "district": "越秀"
+  },
+  {
+   "id": "G143",
+   "name": "十三行私厨",
+   "category": "面食",
+   "avg_price": 60,
+   "rating": 3.7,
+   "lat": 23.1115,
+   "lng": 113.3039,
+   "tags": [
+    "宠物友好"
+   ],
+   "signature": "云吞面",
+   "district": "天河"
+  },
+  {
+   "id": "G144",
+   "name": "淳味饭店",
+   "category": "海鲜",
+   "avg_price": 140,
+   "rating": 4.2,
+   "lat": 23.1121,
+   "lng": 113.3308,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "椒盐濑尿虾",
+   "district": "海珠"
+  },
+  {
+   "id": "G145",
+   "name": "小院酒家",
+   "category": "海鲜",
+   "avg_price": 240,
+   "rating": 4.8,
+   "lat": 23.1364,
+   "lng": 113.3294,
+   "tags": [
+    "适合带娃",
+    "可开发票"
+   ],
+   "signature": "清蒸石斑",
+   "district": "天河"
+  },
+  {
+   "id": "G146",
+   "name": "得闲食堂",
+   "category": "海鲜",
+   "avg_price": 135,
+   "rating": 4.7,
+   "lat": 23.0891,
+   "lng": 113.3498,
+   "tags": [
+    "有包间",
+    "可开发票",
+    "可拼桌"
+   ],
+   "signature": "蒜蓉扇贝",
+   "district": "天河"
+  },
+  {
+   "id": "G147",
+   "name": "小院食堂",
+   "category": "海鲜",
+   "avg_price": 205,
+   "rating": 3.9,
+   "lat": 23.103,
+   "lng": 113.3284,
+   "tags": [
+    "有包间",
+    "可停车"
+   ],
+   "signature": "清蒸石斑",
+   "district": "白云"
+  },
+  {
+   "id": "G148",
+   "name": "半山食府",
+   "category": "海鲜",
+   "avg_price": 110,
+   "rating": 4.5,
+   "lat": 23.1086,
+   "lng": 113.3072,
+   "tags": [],
+   "signature": "清蒸石斑",
+   "district": "天河"
+  },
+  {
+   "id": "G149",
+   "name": "鲜煮意食府",
+   "category": "海鲜",
+   "avg_price": 230,
+   "rating": 4.5,
+   "lat": 23.0845,
+   "lng": 113.2987,
+   "tags": [],
+   "signature": "椒盐濑尿虾",
+   "district": "天河"
+  },
+  {
+   "id": "G150",
+   "name": "淳味餐厅",
+   "category": "海鲜",
+   "avg_price": 140,
+   "rating": 3.8,
+   "lat": 23.1904,
+   "lng": 113.3158,
+   "tags": [],
+   "signature": "蒜蓉扇贝",
+   "district": "越秀"
+  },
+  {
+   "id": "G151",
+   "name": "淳味小馆",
+   "category": "海鲜",
+   "avg_price": 190,
+   "rating": 4.2,
+   "lat": 23.1193,
+   "lng": 113.3259,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "蒜蓉扇贝",
+   "district": "天河"
+  },
+  {
+   "id": "G152",
+   "name": "同福餐厅",
+   "category": "海鲜",
+   "avg_price": 170,
+   "rating": 3.7,
+   "lat": 23.1062,
+   "lng": 113.3088,
+   "tags": [
+    "可拼桌",
+    "适合带娃"
+   ],
+   "signature": "蒜蓉扇贝",
+   "district": "白云"
+  },
+  {
+   "id": "G153",
+   "name": "食光食府",
+   "category": "素食",
+   "avg_price": 65,
+   "rating": 3.9,
+   "lat": 23.1173,
+   "lng": 113.311,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "素鲍鱼",
+   "district": "白云"
+  },
+  {
+   "id": "G154",
+   "name": "十三行小馆",
+   "category": "素食",
+   "avg_price": 105,
+   "rating": 4.6,
+   "lat": 23.0819,
+   "lng": 113.3341,
+   "tags": [],
+   "signature": "罗汉斋",
+   "district": "白云"
+  },
+  {
+   "id": "G155",
+   "name": "淳味私厨",
+   "category": "素食",
+   "avg_price": 70,
+   "rating": 4.1,
+   "lat": 23.1099,
+   "lng": 113.3389,
+   "tags": [
+    "可开发票"
+   ],
+   "signature": "素鲍鱼",
+   "district": "海珠"
+  },
+  {
+   "id": "G156",
+   "name": "十三行食府",
+   "category": "素食",
+   "avg_price": 100,
+   "rating": 4.3,
+   "lat": 23.07,
+   "lng": 113.3306,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "素鲍鱼",
+   "district": "天河"
+  },
+  {
+   "id": "G157",
+   "name": "锦记酒家",
+   "category": "素食",
+   "avg_price": 65,
+   "rating": 4.0,
+   "lat": 23.1787,
+   "lng": 113.2969,
+   "tags": [
+    "有包间",
+    "可停车",
+    "适合带娃"
+   ],
+   "signature": "罗汉斋",
+   "district": "越秀"
+  },
+  {
+   "id": "G158",
+   "name": "老码头食府",
+   "category": "素食",
+   "avg_price": 80,
+   "rating": 3.9,
+   "lat": 23.1339,
+   "lng": 113.3343,
+   "tags": [
+    "可停车"
+   ],
+   "signature": "素鲍鱼",
+   "district": "海珠"
+  },
+  {
+   "id": "G159",
+   "name": "粤海食堂",
+   "category": "素食",
+   "avg_price": 60,
+   "rating": 4.1,
+   "lat": 23.1292,
+   "lng": 113.3348,
+   "tags": [],
+   "signature": "罗汉斋",
+   "district": "海珠"
+  },
+  {
+   "id": "G160",
+   "name": "巷子食府",
+   "category": "素食",
+   "avg_price": 60,
+   "rating": 4.5,
+   "lat": 23.1432,
+   "lng": 113.3119,
+   "tags": [],
+   "signature": "罗汉斋",
+   "district": "天河"
+  },
+  {
+   "id": "G161",
+   "name": "南山食堂",
+   "category": "素食",
+   "avg_price": 55,
+   "rating": 3.7,
+   "lat": 23.0713,
+   "lng": 113.3266,
+   "tags": [
+    "有包间",
+    "安静"
+   ],
+   "signature": "素鲍鱼",
+   "district": "海珠"
+  },
+  {
+   "id": "G162",
+   "name": "家味私厨",
+   "category": "素食",
+   "avg_price": 40,
+   "rating": 3.7,
+   "lat": 23.0953,
+   "lng": 113.3026,
+   "tags": [
+    "有包间",
+    "安静"
+   ],
+   "signature": "素鲍鱼",
+   "district": "白云"
+  },
+  {
+   "id": "G163",
+   "name": "一品餐厅",
+   "category": "西北菜",
+   "avg_price": 65,
+   "rating": 4.2,
+   "lat": 23.1114,
+   "lng": 113.2915,
+   "tags": [
+    "宠物友好",
+    "适合带娃"
+   ],
+   "signature": "大盘鸡",
+   "district": "海珠"
+  },
+  {
+   "id": "G164",
+   "name": "粤海餐厅",
+   "category": "西北菜",
+   "avg_price": 100,
+   "rating": 4.8,
+   "lat": 23.109,
+   "lng": 113.2771,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "大盘鸡",
+   "district": "白云"
+  },
+  {
+   "id": "G165",
+   "name": "一品食堂",
+   "category": "西北菜",
+   "avg_price": 120,
+   "rating": 4.2,
+   "lat": 23.1763,
+   "lng": 113.3599,
+   "tags": [],
+   "signature": "羊肉泡馍",
+   "district": "海珠"
+  },
+  {
+   "id": "G166",
+   "name": "半山小馆",
+   "category": "西北菜",
+   "avg_price": 115,
+   "rating": 3.8,
+   "lat": 23.123,
+   "lng": 113.3025,
+   "tags": [
+    "有包间",
+    "可停车",
+    "可拼桌"
+   ],
+   "signature": "大盘鸡",
+   "district": "越秀"
+  },
+  {
+   "id": "G167",
+   "name": "陈记私厨",
+   "category": "西北菜",
+   "avg_price": 100,
+   "rating": 3.8,
+   "lat": 23.0887,
+   "lng": 113.2718,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "宠物友好"
+   ],
+   "signature": "大盘鸡",
+   "district": "白云"
+  },
+  {
+   "id": "G168",
+   "name": "小院餐厅",
+   "category": "西北菜",
+   "avg_price": 90,
+   "rating": 4.0,
+   "lat": 23.116,
+   "lng": 113.3473,
+   "tags": [
+    "有包间",
+    "可停车",
+    "适合带娃"
+   ],
+   "signature": "羊肉泡馍",
+   "district": "天河"
+  },
+  {
+   "id": "G169",
+   "name": "码头餐厅",
+   "category": "西北菜",
+   "avg_price": 105,
+   "rating": 4.1,
+   "lat": 23.1792,
+   "lng": 113.363,
+   "tags": [
+    "夜宵"
+   ],
+   "signature": "莜面",
+   "district": "越秀"
+  },
+  {
+   "id": "G170",
+   "name": "梁记小馆",
+   "category": "西北菜",
+   "avg_price": 80,
+   "rating": 4.2,
+   "lat": 23.1405,
+   "lng": 113.3534,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "大盘鸡",
+   "district": "天河"
+  },
+  {
+   "id": "G171",
+   "name": "李记餐厅",
+   "category": "西北菜",
+   "avg_price": 70,
+   "rating": 4.5,
+   "lat": 23.089,
+   "lng": 113.3352,
+   "tags": [],
+   "signature": "莜面",
+   "district": "海珠"
+  },
+  {
+   "id": "G172",
+   "name": "锦记食府",
+   "category": "江浙菜",
+   "avg_price": 55,
+   "rating": 4.0,
+   "lat": 23.1157,
+   "lng": 113.3127,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "可开发票"
+   ],
+   "signature": "糖醋排骨",
+   "district": "越秀"
+  },
+  {
+   "id": "G173",
+   "name": "巷子小馆",
+   "category": "江浙菜",
+   "avg_price": 120,
+   "rating": 4.4,
+   "lat": 23.1062,
+   "lng": 113.2999,
+   "tags": [],
+   "signature": "盐水鸭",
+   "district": "海珠"
+  },
+  {
+   "id": "G174",
+   "name": "家味小馆",
+   "category": "江浙菜",
+   "avg_price": 50,
+   "rating": 4.2,
+   "lat": 23.1427,
+   "lng": 113.3139,
+   "tags": [
+    "有包间",
+    "安静"
+   ],
+   "signature": "糖醋排骨",
+   "district": "天河"
+  },
+  {
+   "id": "G175",
+   "name": "梁记食府",
+   "category": "江浙菜",
+   "avg_price": 100,
+   "rating": 4.5,
+   "lat": 23.0729,
+   "lng": 113.2751,
+   "tags": [],
+   "signature": "东坡肉",
+   "district": "白云"
+  },
+  {
+   "id": "G176",
+   "name": "半山饭店",
+   "category": "江浙菜",
+   "avg_price": 75,
+   "rating": 4.0,
+   "lat": 23.1714,
+   "lng": 113.3109,
+   "tags": [
+    "宠物友好",
+    "夜宵"
+   ],
+   "signature": "盐水鸭",
+   "district": "越秀"
+  },
+  {
+   "id": "G177",
+   "name": "好味餐厅",
+   "category": "江浙菜",
+   "avg_price": 75,
+   "rating": 4.4,
+   "lat": 23.1878,
+   "lng": 113.3145,
+   "tags": [
+    "宠物友好"
+   ],
+   "signature": "盐水鸭",
+   "district": "天河"
+  },
+  {
+   "id": "G178",
+   "name": "客味食府",
+   "category": "江浙菜",
+   "avg_price": 105,
+   "rating": 4.6,
+   "lat": 23.147,
+   "lng": 113.3514,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "东坡肉",
+   "district": "越秀"
+  },
+  {
+   "id": "G179",
+   "name": "粤海小馆",
+   "category": "江浙菜",
+   "avg_price": 115,
+   "rating": 4.0,
+   "lat": 23.1778,
+   "lng": 113.2923,
+   "tags": [
+    "有包间",
+    "可拼桌"
+   ],
+   "signature": "东坡肉",
+   "district": "海珠"
+  },
+  {
+   "id": "G180",
+   "name": "得闲食府",
+   "category": "快餐简餐",
+   "avg_price": 55,
+   "rating": 4.5,
+   "lat": 23.0839,
+   "lng": 113.2682,
+   "tags": [],
+   "signature": "鸡汤",
+   "district": "白云"
+  },
+  {
+   "id": "G181",
+   "name": "半山酒家",
+   "category": "快餐简餐",
+   "avg_price": 45,
+   "rating": 3.7,
+   "lat": 23.1848,
+   "lng": 113.3303,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "烧腊饭",
+   "district": "白云"
+  },
+  {
+   "id": "G182",
+   "name": "老码头私厨",
+   "category": "快餐简餐",
+   "avg_price": 45,
+   "rating": 3.9,
+   "lat": 23.1621,
+   "lng": 113.341,
+   "tags": [
+    "可拼桌"
+   ],
+   "signature": "鸡汤",
+   "district": "越秀"
+  },
+  {
+   "id": "G183",
+   "name": "十三行餐厅",
+   "category": "快餐简餐",
+   "avg_price": 45,
+   "rating": 4.1,
+   "lat": 23.1282,
+   "lng": 113.3203,
+   "tags": [
+    "有包间",
+    "可拼桌",
+    "宠物友好"
+   ],
+   "signature": "鸡汤",
+   "district": "天河"
+  },
+  {
+   "id": "G184",
+   "name": "陈记食府",
+   "category": "快餐简餐",
+   "avg_price": 45,
+   "rating": 4.6,
+   "lat": 23.1181,
+   "lng": 113.3988,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "套餐",
+   "district": "白云"
+  },
+  {
+   "id": "G185",
+   "name": "十三行饭店",
+   "category": "快餐简餐",
+   "avg_price": 55,
+   "rating": 4.7,
+   "lat": 23.1345,
+   "lng": 113.3574,
+   "tags": [
+    "有包间",
+    "宠物友好",
+    "夜宵"
+   ],
+   "signature": "鸡汤",
+   "district": "海珠"
+  },
+  {
+   "id": "G186",
+   "name": "南山餐厅",
+   "category": "快餐简餐",
+   "avg_price": 40,
+   "rating": 4.6,
+   "lat": 23.051,
+   "lng": 113.3011,
+   "tags": [
+    "有包间",
+    "安静",
+    "适合带娃"
+   ],
+   "signature": "鸡汤",
+   "district": "海珠"
+  },
+  {
+   "id": "G187",
+   "name": "三味菜馆",
+   "category": "快餐简餐",
+   "avg_price": 25,
+   "rating": 4.4,
+   "lat": 23.1414,
+   "lng": 113.3021,
+   "tags": [
+    "适合带娃"
+   ],
+   "signature": "鸡汤",
+   "district": "海珠"
+  },
+  {
+   "id": "G188",
+   "name": "禾田酒家",
+   "category": "快餐简餐",
+   "avg_price": 50,
+   "rating": 4.0,
+   "lat": 23.1664,
+   "lng": 113.3493,
+   "tags": [],
+   "signature": "烧腊饭",
+   "district": "海珠"
+  },
+  {
+   "id": "G189",
+   "name": "阿婆私厨",
+   "category": "快餐简餐",
+   "avg_price": 45,
+   "rating": 4.3,
+   "lat": 23.1005,
+   "lng": 113.3061,
+   "tags": [
+    "有包间",
+    "夜宵",
+    "适合带娃"
+   ],
+   "signature": "鸡汤",
+   "district": "海珠"
+  },
+  {
+   "id": "G190",
+   "name": "小院食府",
+   "category": "甜品咖啡",
+   "avg_price": 50,
+   "rating": 3.7,
+   "lat": 23.1736,
+   "lng": 113.3439,
+   "tags": [
+    "适合带娃"
+   ],
+   "signature": "多肉葡萄",
+   "district": "海珠"
+  },
+  {
+   "id": "G191",
+   "name": "南山菜馆",
+   "category": "甜品咖啡",
+   "avg_price": 40,
+   "rating": 4.5,
+   "lat": 23.1869,
+   "lng": 113.3369,
+   "tags": [
+    "有包间",
+    "适合带娃"
+   ],
+   "signature": "多肉葡萄",
+   "district": "越秀"
+  },
+  {
+   "id": "G192",
+   "name": "禾田小馆",
+   "category": "甜品咖啡",
+   "avg_price": 45,
+   "rating": 3.9,
+   "lat": 23.1018,
+   "lng": 113.2952,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "双皮奶",
+   "district": "白云"
+  },
+  {
+   "id": "G193",
+   "name": "家味食府",
+   "category": "甜品咖啡",
+   "avg_price": 35,
+   "rating": 4.5,
+   "lat": 23.1041,
+   "lng": 113.2757,
+   "tags": [],
+   "signature": "多肉葡萄",
+   "district": "越秀"
+  },
+  {
+   "id": "G194",
+   "name": "食光酒家",
+   "category": "甜品咖啡",
+   "avg_price": 55,
+   "rating": 4.1,
+   "lat": 23.1472,
+   "lng": 113.3504,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "多肉葡萄",
+   "district": "白云"
+  },
+  {
+   "id": "G195",
+   "name": "三味私厨",
+   "category": "甜品咖啡",
+   "avg_price": 45,
+   "rating": 4.7,
+   "lat": 23.1446,
+   "lng": 113.2672,
+   "tags": [
+    "有包间",
+    "可开发票"
+   ],
+   "signature": "拿铁",
+   "district": "海珠"
+  },
+  {
+   "id": "G196",
+   "name": "巷子酒家",
+   "category": "甜品咖啡",
+   "avg_price": 60,
+   "rating": 4.3,
+   "lat": 23.1115,
+   "lng": 113.363,
+   "tags": [
+    "有包间"
+   ],
+   "signature": "拿铁",
+   "district": "越秀"
+  },
+  {
+   "id": "G197",
+   "name": "得闲酒家",
+   "category": "甜品咖啡",
+   "avg_price": 50,
+   "rating": 4.4,
+   "lat": 23.1401,
+   "lng": 113.363,
+   "tags": [
+    "适合带娃",
+    "可拼桌"
+   ],
+   "signature": "双皮奶",
+   "district": "白云"
+  },
+  {
+   "id": "G198",
+   "name": "得闲菜馆",
+   "category": "甜品咖啡",
+   "avg_price": 35,
+   "rating": 3.8,
+   "lat": 23.0709,
+   "lng": 113.3573,
+   "tags": [
+    "可停车",
+    "安静"
+   ],
+   "signature": "多肉葡萄",
+   "district": "越秀"
+  }
+ ]
+}

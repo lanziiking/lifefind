@@ -1,0 +1,27 @@
+# 密钥：.env 里有百炼和高德的 Key，绝对不能提交
+.env
+.env.*
+!.env.example
+
+# 虚拟环境
+.venv/
+venv/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 打包产物
+build/
+dist/
+*.spec
+
+# 运行时缓存（评测逐条写入，可重新生成）
+data/run_*.jsonl
+*.log
+
+# 系统/编辑器
+.DS_Store
+.idea/
+.vscode/
